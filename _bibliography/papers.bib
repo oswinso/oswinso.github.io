@@ -1,72 +1,67 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,}
+@article{so2021maximum,
+  abbr={ICRA 2022},
+  author    = {Oswin So and
+               Ziyi Wang and
+               Evangelos A. Theodorou},
+  title     = {Maximum Entropy Differential Dynamic Programming},
+  journal   = {ICRA 2022 (in submission)},
+  volume    = {abs/2110.06451},
+  year      = {2021},
+  abstract={In this paper, we present a novel maximum entropy formulation of the Differential Dynamic Programming algorithm and derive two variants using unimodal and multimodal value functions parameterizations. By combining the maximum entropy Bellman equations with a particular approximation of the cost function, we are able to obtain a new formulation of Differential Dynamic Programming which is able to escape from local minima via exploration with a multimodal policy. To demonstrate the efficacy of the proposed algorithm, we provide experimental results using four systems on tasks that are represented by cost functions with multiple local minima and compare them against vanilla Differential Dynamic Programming. Furthermore, we discuss connections with previous work on the linearly solvable stochastic control framework and its extensions in relation to compositionality.},
+  url       = {https://arxiv.org/abs/2110.06451},
+  eprinttype = {arXiv},
+  eprint    = {2110.06451},
+  arxiv={2110.06451},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
+
+
+@inproceedings{wang2021variational,
+  abbr={RSS 2021},
+  title={Variational Inference MPC using Tsallis Divergence},
+  author={Wang, Ziyi and So, Oswin and Gibson, Jason and Vlahov, Bogdan and Gandhi, Manan S and Liu, Guan-Horng and Theodorou, Evangelos A},
+  booktitle={Robotics: Science and Systems},
+  year={2021},
+  abstract={In this paper, we provide a generalized framework for Variational Inference-Stochastic Optimal Control by using thenon-extensive Tsallis divergence. By incorporating the deformed exponential function into the optimality likelihood function, a novel Tsallis Variational Inference-Model Predictive Control algorithm is derived, which includes prior works such as Variational Inference-Model Predictive Control, Model Predictive PathIntegral Control, Cross Entropy Method, and Stein VariationalInference Model Predictive Control as special cases. The proposed algorithm allows for effective control of the cost/reward transform and is characterized by superior performance in terms of mean and variance reduction of the associated cost. The aforementioned features are supported by a theoretical and numerical analysis on the level of risk sensitivity of the proposed algorithm as well as simulation experiments on 5 different robotic systems with 3 different policy parameterizations.},
+  arxiv={2104.00241},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.,},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  selected={true}
+
+@article{evans2021spatio,
+  abbr={arxiv},
+  title={Spatio-Temporal Differential Dynamic Programming for Control of Fields},
+  author={Evans, Ethan N and So, Oswin and Kendall, Andrew P and Liu, Guan-Horng and Theodorou, Evangelos A},
+  journal={arXiv preprint (in submission)},
+  year={2021},
+  abstract={We consider the optimal control problem of a general nonlinear spatio-temporal system described by Partial Differential Equations (PDEs). Theory and algorithms for control of spatio-temporal systems are of rising interest among the automatic control community and exhibit numerous challenging characteristic from a control standpoint. Recent methods focus on finite-dimensional optimization techniques of a discretized finite dimensional ODE approximation of the infinite dimensional PDE system. In this paper, we derive a differential dynamic programming (DDP) framework for distributed and boundary control of spatio-temporal systems in infinite dimensions that is shown to generalize both the spatio-temporal LQR solution, and modern finite dimensional DDP frameworks. We analyze the convergence behavior and provide a proof of global convergence for the resulting system of continuous-time forward-backward equations. We explore and develop numerical approaches to handle sensitivities that arise during implementation, and apply the resulting STDDP algorithm to a linear and nonlinear spatio-temporal PDE system. Our framework is derived in infinite dimensional Hilbert spaces, and represents a discretization-agnostic framework for control of nonlinear spatio-temporal PDE systems.},
+  arxiv={2104.04044},
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik,},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.,},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{wang2021adaptive,
+  abbr={L4DC 2021},
+  author    = {Ziyi Wang and
+               Oswin So and
+               Keuntaek Lee and
+               Evangelos A. Theodorou},
+  editor    = {Ali Jadbabaie and
+               John Lygeros and
+               George J. Pappas and
+               Pablo A. Parrilo and
+               Benjamin Recht and
+               Claire J. Tomlin and
+               Melanie N. Zeilinger},
+  title     = {Adaptive Risk Sensitive Model Predictive Control with Stochastic Search},
+  booktitle = {Proceedings of the 3rd Annual Conference on Learning for Dynamics
+               and Control, {L4DC} 2021, 7-8 June 2021, Virtual Event, Switzerland},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {144},
+  pages     = {510--522},
+  publisher = {{PMLR}},
+  year      = {2021},
+  abstract={We present a general framework for optimizing the Conditional Value-at-Risk for dynamical systems using stochastic search. The framework is capable of handling the uncertainty from the initial condition, stochastic dynamics, and uncertain parameters in the model. The algorithm is compared against a risk-sensitive distributional reinforcement learning framework and demonstrates outperformance on a pendulum and cartpole with stochastic dynamics. We also showcase the applicability of the framework to robotics as an adaptive risk-sensitive controller by optimizing with respect to the fully nonlinear belief provided by a particle filter on a pendulum, cartpole, and quadcopter in simulation.},
+  url       = {http://proceedings.mlr.press/v144/wang21b.html},
+  arxiv={2009.01090},
 }
