@@ -13,7 +13,7 @@ profile:
 news: true
 selected_papers: false
 all_publications: true
-publication_years: [2021]
+publication_years: [2022, 2021]
 social: false
 ---
 
