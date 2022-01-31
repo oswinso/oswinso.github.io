@@ -9,7 +9,8 @@
                         <th scope="row">{{ item.date | date: "%b %Y" }}</th>
                         <td>
                             {% if item.inline %}
-                                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                                {% comment %}{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}{% endcomment %}
+                                {{ item.content | emojify }}
                             {% else %}
                                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                             {% endif %}
