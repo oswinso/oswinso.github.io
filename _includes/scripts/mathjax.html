@@ -2,8 +2,14 @@
 <!-- MathJax -->
 <script type="text/javascript">
   window.MathJax = {
+    loader: {load: ["[tex]/mathtools"]},
     tex: {
-      tags: 'ams'
+      tags: "ams",
+      packages: {"[+]": ["mathtools"]},
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {
+        T: "{^{\\top}}",
+      }
     }
   };
 </script>

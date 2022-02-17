@@ -78,8 +78,8 @@ panelbear_analytics: B8XlngYX3Ic # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: # your blog must have a name for it to show up in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_name: Blog
+blog_description: Various collection of random thoughts.
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -87,7 +87,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: oswinso # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # -----------------------------------------------------------------------------

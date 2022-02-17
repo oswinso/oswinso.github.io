@@ -40,7 +40,7 @@ See my
 </b>
 here (updated November 2021).
 
-<strong>Contact: </strong> oswinso [at] gatech [dot] edu  
+<strong>Contact: </strong> <a href="mailto:oswinso@gatech.edu">oswinso [at] gatech [dot] edu</a>  
 <strong>Follow: </strong>
 <a href="https://scholar.google.com/citations?user=AwlxGQgAAAAJ" target="_blank" title="Google Scholar">
     <i class="ai ai-google-scholar"></i> Google Scholar</a>
