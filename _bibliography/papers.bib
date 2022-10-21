@@ -1,51 +1,71 @@
 ---
 ---
 
+@inproceedings{so2022data,
+    abbr={ML4PS 2022},
+    title={Data-driven discovery of non-Newtonian astronomy via learning non-Euclidean Hamiltonian},
+    author={So, Oswin and Li, Gongjie and Theodorou, Evangelos A and Tao, Molei},
+    booktitle={Machine Learning and the Physical Sciences Workshop NeurIPS},
+    abstract = {Incorporating the Hamiltonian structure of physical dynamics into deep learning models provides a powerful way to improve the interpretability and prediction accuracy. While previous works are mostly limited to the Euclidean spaces, their extension to the Lie group manifold is needed when rotations form a key component of the dynamics, such as the higher-order physics beyond simple point-mass dynamics for N-body celestial interactions. Moreover, the multiscale nature of these processes presents a challenge to existing methods as a long time horizon is required. By leveraging a symplectic Lie-group manifold preserving integrator, we present a method for data-driven discovery of non-Newtonian astronomy. Preliminary results show the importance of both these properties in training stability and prediction accuracy.},
+    year={2022},
+    arxiv = {2210.00090},
+    url={https://arxiv.org/abs/2210.00090}
+}
+
+@inproceedings{liu2022deep,
+    abbr={NeurIPS 2022},
+    title={Deep Generalized Schrodinger Bridge},
+    author={Liu, Guan-Horng and Chen*, Tianrong and So*, Oswin and Theodorou, Evangelos A},
+    booktitle={Thirty-Sixth Conference on Neural Information Processing Systems},
+    abstract = {Mean-Field Game (MFG) serves as a crucial mathematical framework in modeling the collective behavior of individual agents interacting stochastically with a large population. In this work, we aim at solving a challenging class of MFGs in which the differentiability of these interacting preferences may not be available to the solver, and the population is urged to converge exactly to some desired distribution. These setups are, despite being well-motivated for practical purposes, complicated enough to paralyze most (deep) numerical solvers. Nevertheless, we show that Schr\"odinger Bridge - as an entropy-regularized optimal transport model - can be generalized to accepting mean-field structures, hence solving these MFGs. This is achieved via the application of Forward-Backward Stochastic Differential Equations theory, which, intriguingly, leads to a computational framework with a similar structure to Temporal Difference learning. As such, it opens up novel algorithmic connections to Deep Reinforcement Learning that we leverage to facilitate practical training. We show that our proposed objective function provides necessary and sufficient conditions to the mean-field problem. Our method, named Deep Generalized Schr\"odinger Bridge (DeepGSB), not only outperforms prior methods in solving classical population navigation MFGs, but is also capable of solving 1000-dimensional opinion depolarization, setting a new state-of-the-art numerical solver for high-dimensional MFGs. Our code will be made available at https://github.com/ghliu/DeepGSB.},
+    arxiv = {2209.09893},
+    url={https://arxiv.org/abs/2209.09893},
+    year={2022}
+}
+
 @article{so2022multimodal,
-    abbr={RSS 2022},
+    abbr={arxiv},
     author    = {Oswin So and
                Kyle Stachowicz and
                Evangelos A. Theodorou},
     title     = {Multimodal Maximum Entropy Dynamic Games},
-    journal   = {RSS 2022 (in submission)},
+    journal={arXiv preprint (in submission)},
     year      = {2022},
     abstract = {Environments with multi-agent interactions often result a rich set of modalities of behavior between agents due to the inherent suboptimality of decision making processes when agents settle for satisfactory decisions. However, existing algorithms for solving these dynamic games are strictly unimodal and fail to capture the intricate multimodal behaviors of the agents. In this paper, we propose MMELQGames (Multimodal Maximum-Entropy Linear Quadratic Games), a novel constrained multimodal maximum entropy formulation of the Differential Dynamic Programming algorithm for solving generalized Nash equilibria. By formulating the problem as a certain dynamic game with incomplete and asymmetric information where agents are uncertain about the cost and dynamics of the game itself, the proposed method is able to reason about multiple local generalized Nash equilibria, enforce constraints with the Augmented Lagrangian framework and also perform Bayesian inference on the latent mode from past observations. We assess the efficacy of the proposed algorithm on two illustrative examples: multi-agent collision avoidance and autonomous racing. In particular, we show that only MMELQGames is able to effectively block a rear vehicle when given a speed disadvantage and the rear vehicle can overtake from multiple positions.},
-    pdf = {So_2022_Multimodal_Maximum_Entropy_Dynamic_Games.pdf},
+    arxiv = {2201.12925},
     video = {https://youtu.be/7molN_Q38dk}
 }
 
-@article{pereira2022decentralized,
+@inproceedings{pereira2022decentralized,
     abbr={RSS 2022},
     author    = {Marcus A. Pereira and
                 Augustinos D. Saravanos and
                 Oswin So and
                Evangelos A. Theodorou},
     title     = {Decentralized Safe Multi-agent Stochastic Optimal Control using Deep FBSDEs and ADMM},
-    journal   = {RSS 2022 (in submission)},
+    booktitle   = {Proceedings of Robotics: Science and Systems},
     year      = {2022},
     abstract = {In this work, we propose a novel safe and scalable decentralized solution for multi-agent control in the presence of stochastic disturbances. Safety is mathematically encoded using stochastic control barrier functions and safe controls are computed by solving quadratic programs. Decentralization is achieved by augmenting to each agent’s optimization variables, copy variables, for its neighboring agents. This allows us to decouple the centralized multi-agent optimization problem. How- ever, to ensure safety, neighboring agents must agree on what is safe for both of us and this creates a need for consensus. To enable safe consensus solutions, we incorporate an ADMM- based approach. Specifically, we propose a Merged CADMM- OSQP implicit neural network layer, that solves a mini-batch of both, local quadratic programs as well as the overall con- sensus problem, as a single optimization problem. This layer is embedded within a Deep FBSDEs network architecture at every time step, to facilitate end-to-end differentiable, safe and decentralized stochastic optimal control. The efficacy of the proposed approach is demonstrated on several challenging multi- robot tasks in simulation. By imposing requirements on safety specified by collision avoidance constraints, the safe operation of all agents is ensured during the entire training process. We also demonstrate superior scalability in terms of computational and memory savings as compared to a centralized approach.},
-    pdf = {Pereira_et_al_Decentralized_Safe_Multi-agent_Stochastic_Optimal_Control_using_Deep_FBSDEs.pdf},
+    arxiv = {2202.10658},
+    doi = {10.15607/RSS.2022.XVIII.055},
     video = {https://youtu.be/xewGeuDcDho}
 }
 
-@article{so2021maximum,
+@inproceedings{so2021maximum,
     abbr={ICRA 2022},
     author    = {Oswin So and
                  Ziyi Wang and
                  Evangelos A. Theodorou},
     title     = {Maximum Entropy Differential Dynamic Programming},
-    journal   = {ICRA 2022},
+    booktitle={2022 International Conference on Robotics and Automation (ICRA)},
     volume    = {abs/2110.06451},
     year      = {2021},
     abstract={In this paper, we present a novel maximum entropy formulation of the Differential Dynamic Programming algorithm and derive two variants using unimodal and multimodal value functions parameterizations. By combining the maximum entropy Bellman equations with a particular approximation of the cost function, we are able to obtain a new formulation of Differential Dynamic Programming which is able to escape from local minima via exploration with a multimodal policy. To demonstrate the efficacy of the proposed algorithm, we provide experimental results using four systems on tasks that are represented by cost functions with multiple local minima and compare them against vanilla Differential Dynamic Programming. Furthermore, we discuss connections with previous work on the linearly solvable stochastic control framework and its extensions in relation to compositionality.},
     url       = {https://arxiv.org/abs/2110.06451},
-    eprinttype = {arXiv},
-    eprint    = {2110.06451},
+    doi={10.1109/ICRA46639.2022.9812228},
     arxiv={2110.06451},
     video = {https://youtu.be/NHr9Kj_jnAI}
 }
-
-
 
 @inproceedings{wang2021variational,
   abbr={RSS 2021},

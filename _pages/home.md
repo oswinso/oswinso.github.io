@@ -3,8 +3,7 @@ layout: home
 title: about
 permalink: /
 description: >
-    <h6>4th Year Computer Science @ Georgia Tech</h6>
-    <h6>Applying for PhD programs in ML and Robotics for <b>Fall 2022</b></h6><br>
+    <h6>1st Year Grad Student @ <a href="https://aeroastro.mit.edu/realm">REALM</a>, MIT AeroAstro</h6>
 
 profile:
     align: right
@@ -17,18 +16,16 @@ publication_years: [2022, 2021]
 social: false
 ---
 
-I'm Oswin So, a 4th year Computer Science student in Georgia Tech, currently working as an
+I'm Oswin So, a 1st year grad student in <a href="https://aeroastro.mit.edu/realm">REALM</a> at MIT, advised by <a href="https://chuchu.mit.edu/">Chuchu Fan</a>.
+Previously, I did my undergrad at Georgia Tech, where I was very fortunate to do
 undergraduate researcher with
-<a href="https://scholar.google.com/citations?user=dG9MV7oAAAAJ&hl=en" target="_blank">Dr. Evangelos Theodorou</a>
-in the
-<a href="https://sites.gatech.edu/acds/" target="_blank">Autonomous Control and Decision Systems (ACDS)</a>
-Lab.
+<a href="https://scholar.google.com/citations?user=dG9MV7oAAAAJ&hl=en" target="_blank">Evangelos Theodorou</a>
+and
+<a href="https://mtao8.math.gatech.edu" target="_blank">Molei Tao</a>.
 
-So far, my research has focused around the areas of **maximum entropy stochastic optimal control** and
-**safe stochastic optimal control**, where I have published at top-tier conferences such as
-**RSS**, **ICRA** and **L4DC**.
 
-I worked at Aurora as a Behavior Planning Intern during the summer of 2021 under
+Last summer, I interned at Toyota Research Institute where I worked on game theoretic planning.
+Previously, I worked at Aurora as a Behavior Planning Intern during the summer of 2021 under
 <a href="https://scholar.google.com/citations?user=daYjNkAAAAAJ&hl=en" target="_blank">Paul Vernaza</a>
 and
 <a href="https://scholar.google.com/citations?user=Nt4rO1EAAAAJ&hl=en" target="_blank">Arun Venkatraman</a>,
@@ -40,7 +37,7 @@ See my
 </b>
 here (updated November 2021).
 
-<strong>Contact: </strong> <a href="mailto:oswinso@gatech.edu">oswinso [at] gatech [dot] edu</a>  
+<strong>Contact: </strong> <a href="mailto:oswinso@gatech.edu">oswinso [at] mit [dot] edu</a>  
 <strong>Follow: </strong>
 <a href="https://scholar.google.com/citations?user=AwlxGQgAAAAJ" target="_blank" title="Google Scholar">
     <i class="ai ai-google-scholar"></i> Google Scholar</a>

@@ -72,16 +72,18 @@
             </div>
 
             <div class="periodical">
-                {% if entry.type == "article" %}
-                    <em>{{ entry.journal }}</em>
-                {% elsif entry.type == "inproceedings" %}
-                    <em>{{ entry.booktitle }}</em>
-                {% endif %}
-                {% if entry.month %}
-                    , {{ entry.month | capitalize }}
-                {% endif %}
-                {% if entry.year %}
-                    , {{ entry.year }}
+                {% if entry.booktitle != blank or entry.journal != blank %}
+                    {% if entry.type == "article" %}
+                        <em>{{ entry.journal }}</em>
+                    {% elsif entry.type == "inproceedings" %}
+                        <em>{{ entry.booktitle }}</em>
+                    {% endif %}
+                    {% if entry.month %}
+                        , {{ entry.month | capitalize }}
+                    {% endif %}
+                    {% if entry.year %}
+                        , {{ entry.year }}
+                    {% endif %}
                 {% endif %}
             </div>
         {% endif %}
