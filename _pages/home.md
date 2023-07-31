@@ -12,7 +12,7 @@ profile:
 news: true
 selected_papers: false
 all_publications: true
-publication_years: [2022, 2021]
+publication_years: [2023, 2022, 2021]
 social: false
 ---
 
@@ -37,7 +37,7 @@ See my
 </b>
 here (updated November 2021).
 
-<strong>Contact: </strong> <a href="mailto:oswinso@gatech.edu">oswinso [at] mit [dot] edu</a>  
+<strong>Contact: </strong> <a href="mailto:oswinso@mit.edu">oswinso [at] mit [dot] edu</a>  
 <strong>Follow: </strong>
 <a href="https://scholar.google.com/citations?user=AwlxGQgAAAAJ" target="_blank" title="Google Scholar">
     <i class="ai ai-google-scholar"></i> Google Scholar</a>
