@@ -1,5 +1,6 @@
 ---
 layout: distill
+hidden: true
 title: Problems with Almost-Sure Guarantees of Stochastic CBFs.
 date: 2023-09-29
 tags: math cbf safety
