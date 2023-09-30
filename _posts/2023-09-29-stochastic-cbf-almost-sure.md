@@ -24,8 +24,16 @@ _styles: >
     .theorem[text]:before {
         content: "Theorem (" attr(text) ")  ";
     }
+    .false-theorem:before {
+      content: "False Theorem. ";
+      font-weight: bold;
+      font-style: normal;
+    }
+    .false-theorem[text]:before {
+      content: "False Theorem (" attr(text) ")  ";
+    }
 ---
-I've always been found Andrew Clark's proofs on Stochastic CBFs <d-cite key="clark2019control,clark2021control"></d-cite> to be very impressive.
+I've always found Andrew Clark's proofs on Stochastic CBFs <d-cite key="clark2019control,clark2021control"></d-cite> to be very impressive.
 Specifically, it was very impressive that stochastic CBFs could guarantee that safety holds _almost-surely_ for stochastic systems in continuous time. 
 In fact, a little too impressive. Consequently, while trying to see how the proof worked, I discovered a potential mistake in the proof related to the technicalities of stochastic processes.
 
@@ -45,7 +53,7 @@ Namely, for all $x$ such that $h(x) > 0$, there exists a $u$ satisfying the cond
 Define the zero superlevel set of $h$ as $\mathcal{C}$, i.e., $\mathcal{C} \coloneqq \\{ x \mid h(x) \geq 0 \\}$
 Then, it is shown in <d-cite key="clark2021control"></d-cite> that the satisfaction of \eqref{eq:scbf_condition} guarantees that $\mathcal{C}$ is forward-invariant _almost-surely_:
 
-<div class="theorem" text="Almost-Sure Safety of Stochastic CBFs">
+<div class="false-theorem" text="Almost-Sure Safety of Stochastic CBFs">
 If $u$ satisfies \eqref{eq:scbf_condition}, then $\mathop{Pr}(x_t \in \mathcal{C}\; \forall t) = 1$ provided that $x_0 \in \mathcal{C}$.
 </div>
 
@@ -70,13 +78,15 @@ We can then verify that \eqref{eq:scbf_condition} easily holds in this case, sin
 
 In this case, $\mathcal{C} \coloneqq \\{ x \mid x \geq 0 \\}$. The theorem then reduces to the following _alarming_ result (using that $x_t = W_t$).
 
-<div class="theorem" text="Brownian Motion is Non-Negative Almost-Surely.">
+<div class="false-theorem" text="Brownian Motion is Non-Negative Almost-Surely.">
     Suppose $W_t \geq 0$. Then, $\mathop{Pr}(W_t \geq 0\; \forall t) = 1$.
 </div>
 
 However, since Brownian motion has unbounded support, we know that this cannot be true. To try and see how we came to this conclusion, we now trace through the proof technique from <d-cite key="clark2021control"></d-cite> applied to this simple example.
 
 ## Tracing through the proof
+We now follow the proof from <d-cite key="clark2021control"></d-cite> for this special case of having $x=W$.
+
 <blockquote>
 It is sufficient to show that, for any $t > 0$, and any $\epsilon > 0$, and any $\delta \in (0, 1)$,
 
@@ -126,16 +136,16 @@ Suppose that the result holds up to time $t \in [\eta_i, \zeta_i]$ for all $i \g
 Since $W(t) \leq \theta$ for $t \in [\eta_i, \zeta_i]$ by definition of $\eta$ and $\zeta$, \eqref{eq:scbf_condition_W} implies that
 
 \begin{equation}
-    0 \geq -W(t) \geq -\theta.
+    0 \geq -h(W(t)) = -W(t) \geq -\theta \quad \implies \quad \theta \geq 0.
 \end{equation}
 
-Hence,
+Hence, combining this with the inductive hypothesis $W_{\eta_i} \geq U_{\eta_i}$ gives us
 
 \begin{equation}
     W_t - U_t = \left( W_{\eta_i} - U_{\eta_i} \right) + \int_{\eta_i}^t \theta\, d\tau \geq 0.
 \end{equation}
 
-and $W(t) \geq U_t$. Furthermore, for $t \in [\eta_i, \zeta_i]$, $W(t) \leq \theta$, hence $U_t \leq \theta$.
+Thus, $W(t) \geq U_t$. Furthermore, for $t \in [\eta_i, \zeta_i]$, $W(t) \leq \theta$, hence $U_t \leq \theta$, completing the inductive step for this case.
 
 <div>
 <strong>Case 2:</strong>
