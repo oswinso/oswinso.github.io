@@ -1,6 +1,19 @@
 ---
 ---
 
+@inproceedings{so2024train,
+    abbr={ICRA 2024},
+    author={So, Oswin and Serlin, Zachary and Mann, Makai and Gonzales, Jake and Rutledge, Kwesi and Roy, Nicholas and Fan, Chuchu},
+    title={How to train your neural control barrier function: Learning safety filters for complex input-constrained systems},
+    booktitle = {2024 International Conference on Robotics and Automation (ICRA)},
+    year      = {2024},
+    abstract={Control barrier functions (CBF) have become popular as a safety filter to guarantee the safety of nonlinear dynamical systems for arbitrary inputs. However, it is difficult to construct functions that satisfy the CBF constraints for high relative degree systems with input constraints. To address these challenges, recent work has explored learning CBFs using neural networks via neural CBF (NCBF). However, such methods face difficulties when scaling to higher dimensional systems under input constraints. In this work, we first identify challenges that NCBFs face during training. Next, to address these challenges, we propose policy neural CBF (PNCBF), a method of constructing CBFs by learning the value function of a nominal policy, and show that the value function of the maximum-over-time cost is a CBF. We demonstrate the effectiveness of our method in simulation on a variety of systems ranging from toy linear systems to an F-16 jet with a 16-dimensional state space. Finally, we validate our approach on a two-agent quadcopter system on hardware under tight input constraints.},
+    arxiv = {2310.15478},
+    website = {https://mit-realm.github.io/efppo},
+    show_year = {true},
+    url={https://arxiv.org/abs/2310.15478}
+}
+
 @inproceedings{so2023solving,
   abbr={RSS 2023},
   title={Solving Stabilize-Avoid Optimal Control via Epigraph Form and Deep Reinforcement Learning},
