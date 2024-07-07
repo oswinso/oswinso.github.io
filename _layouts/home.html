@@ -5,11 +5,17 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-header">
-      {% if site.title == "blank" %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
-      {% else %} {{ site.title }}{% endif %}
+      {% if page.title %}
+        {{ page.title }}
+      {% else %}
+        {% if site.title == "blank" %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
+        {% else %} {{ site.title }}{% endif %}
+      {% endif %}
     </h1>
-    <p class="desc">{{ page.description }}</p>
+    {% if page.description %}
+      <p class="desc">{{ page.description }}</p>
+    {% endif %}
   </header>
 
   <article>
