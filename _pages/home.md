@@ -16,7 +16,7 @@ publication_years: [2024, 2023, 2022, 2021]
 social: false
 ---
 
-I'm Oswin So, a 2nd year grad student in <a href="https://aeroastro.mit.edu/realm">REALM</a> at MIT, advised by <a href="https://chuchu.mit.edu/">Chuchu Fan</a>.
+I'm Oswin So, a 3rd year grad student in <a href="https://aeroastro.mit.edu/realm">REALM</a> at MIT, advised by <a href="https://chuchu.mit.edu/">Chuchu Fan</a>.
 Previously, I did my undergrad at Georgia Tech, where I was very fortunate to do
 undergraduate researcher with
 <a href="https://scholar.google.com/citations?user=dG9MV7oAAAAJ&hl=en" target="_blank">Evangelos Theodorou</a>
@@ -35,7 +35,7 @@ See my
 <b>
     <a href="{{ site.resume_path | prepend: 'https://oswinso.github.io/assets/pdf/' }}" target="_blank">full CV</a>
 </b>
-here (updated May 2024).
+here (updated October 2024).
 
 <strong>Contact: </strong> <a href="mailto:oswinso@mit.edu">oswinso [at] mit [dot] edu</a>  
 <strong>Follow: </strong>

@@ -1,6 +1,50 @@
 ---
 ---
 
+@inproceedings{knoedler2025rpcbf,
+  title     = {RPCBF: Constructing Safety Filters Robust to Model Error and Disturbances via Policy Control Barrier Functions},
+  author    = {Knoedler*, Luzia and So*, Oswin and Yin, Ji and Black, Mitchell and Serlin, Zachary and Tsiotras, Panagiotis and Alonso-Mora, Javier and Fan, Chuchu},
+  booktitle = {2025 IEEE International Conference on Robotics and Automation (ICRA) (Under Review)},
+  year      = {2024},
+  url={https://oswinso.xyz/rpcbf}
+}
+
+@inproceedings{so2024solving,
+  abbr={NeurIPS 2024},
+  title={Solving Minimum-Cost Reach Avoid using Reinforcement Learning},
+  author={So*, Oswin and Ge*, Cheng and Fan, Chuchu},
+  booktitle={Thirty-Eighth Conference on Neural Information Processing Systems},
+  abstract={Current reinforcement-learning methods are unable to directly learn policies that solve the minimum cost reach-avoid problem to minimize cumulative costs subject to the constraints of reaching the goal and avoiding unsafe states, as the structure of this new optimization problem is incompatible with current methods. Instead, a surrogate problem is solved where all objectives are combined with a weighted sum. However, this surrogate objective results in suboptimal policies that do not directly minimize the cumulative cost. In this work, we propose RC-PPO, a reinforcement-learning-based method for solving the minimum-cost reach-avoid problem by using connections to Hamilton-Jacobi reachability. Empirical results demonstrate that RC-PPO learns policies with comparable goal-reaching rates to while achieving up to 57% lower cumulative costs compared to existing methods on a suite of minimum-cost reach-avoid benchmarks on the Mujoco simulator.},
+  show_year = {true},
+  year={2024},
+  url={https://oswinso.xyz/rcppo}
+}
+
+@article{zhang2024gcbf+,
+  abbr={T-RO},
+  title={Gcbf+: A neural graph control barrier function framework for distributed safe multi-agent control},
+  author={Zhang*, Songyuan and So*, Oswin and Garg, Kunal and Fan, Chuchu},
+  journal={IEEE Transactions on Robotics (Under Review)},
+  publisher={IEEE},
+  year={2024},
+  abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
+  arxiv = {2311.13714},
+}
+
+@article{garg2024learning,
+  abbr={ARC},
+  title={Learning safe control for multi-robot systems: Methods, verification, and open challenges},
+  author={Garg, Kunal and Zhang, Songyuan and So, Oswin and Dawson, Charles and Fan, Chuchu},
+  journal={Annual Reviews in Control},
+  volume={57},
+  pages={100948},
+  year={2024},
+  abstract={In this survey, we review the recent advances in control design methods for robotic multi-agent systems (MAS), focussing on learning-based methods with safety considerations. We start by reviewing various notions of safety and liveness properties, and modeling frameworks used for problem formulation of MAS. Then we provide a comprehensive review of learning-based methods for safe control design for multi-robot systems. We start with various types of shielding-based methods, such as safety certificates, predictive filters, and reachability tools. Then, we review the current state of control barrier certificate learning in both a centralized and distributed manner, followed by a comprehensive review of multi-agent reinforcement learning with a particular focus on safety. Next, we discuss the state-of-the-art verification tools for the correctness of learning-based methods. Based on the capabilities and the limitations of the state of the art methods in learning and verification for MAS, we identify various broad themes for open challenges: how to design methods that can achieve good performance along with safety guarantees; how to decompose single-agent based centralized methods for MAS; how to account for communication-related practical issues; and how to assess transfer of theoretical guarantees to practice.},
+  publisher={Elsevier},
+  arxiv = {2311.13714},
+  url={https://www.sciencedirect.com/science/article/pii/S1367578824000178}
+}
+
 @inproceedings{so2024train,
     abbr={ICRA 2024},
     author={So, Oswin and Serlin, Zachary and Mann, Makai and Gonzales, Jake and Rutledge, Kwesi and Roy, Nicholas and Fan, Chuchu},
@@ -10,7 +54,6 @@
     abstract={Control barrier functions (CBF) have become popular as a safety filter to guarantee the safety of nonlinear dynamical systems for arbitrary inputs. However, it is difficult to construct functions that satisfy the CBF constraints for high relative degree systems with input constraints. To address these challenges, recent work has explored learning CBFs using neural networks via neural CBF (NCBF). However, such methods face difficulties when scaling to higher dimensional systems under input constraints. In this work, we first identify challenges that NCBFs face during training. Next, to address these challenges, we propose policy neural CBF (PNCBF), a method of constructing CBFs by learning the value function of a nominal policy, and show that the value function of the maximum-over-time cost is a CBF. We demonstrate the effectiveness of our method in simulation on a variety of systems ranging from toy linear systems to an F-16 jet with a 16-dimensional state space. Finally, we validate our approach on a two-agent quadcopter system on hardware under tight input constraints.},
     arxiv = {2310.15478},
     website = {https://mit-realm.github.io/efppo},
-    show_year = {true},
     url={https://arxiv.org/abs/2310.15478}
 }
 
