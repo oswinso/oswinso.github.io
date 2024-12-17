@@ -18,14 +18,13 @@ social: false
 
 I'm Oswin So, a 3rd year grad student in <a href="https://aeroastro.mit.edu/realm">REALM</a> at MIT, advised by <a href="https://chuchu.mit.edu/">Chuchu Fan</a>.
 Previously, I did my undergrad at Georgia Tech, where I was very fortunate to do
-undergraduate researcher with
+undergraduate research with
 <a href="https://scholar.google.com/citations?user=dG9MV7oAAAAJ&hl=en" target="_blank">Evangelos Theodorou</a>
 and
 <a href="https://mtao8.math.gatech.edu" target="_blank">Molei Tao</a>.
 
-
-Last summer, I interned at Toyota Research Institute where I worked on game theoretic planning.
-Previously, I worked at Aurora as a Behavior Planning Intern during the summer of 2021 under
+I've previously interned at Toyota Research Institute, where I worked on game theoretic planning.
+I also worked at Aurora as a Behavior Planning Intern during the summer of 2021 under
 <a href="https://scholar.google.com/citations?user=daYjNkAAAAAJ&hl=en" target="_blank">Paul Vernaza</a>
 and
 <a href="https://scholar.google.com/citations?user=Nt4rO1EAAAAJ&hl=en" target="_blank">Arun Venkatraman</a>,
