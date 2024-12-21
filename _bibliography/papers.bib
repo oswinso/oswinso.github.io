@@ -1,6 +1,18 @@
 ---
 ---
 
+@article{zhang2024gcbf+,
+  abbr={T-RO},
+  title={GCBF+: A neural graph control barrier function framework for distributed safe multi-agent control},
+  author={Zhang*, Songyuan and So*, Oswin and Garg, Kunal and Fan, Chuchu},
+  journal={IEEE Transactions on Robotics},
+  publisher={IEEE},
+  year={2024},
+  website={https://mit-realm.github.io/gcbfplus-website},
+  abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
+  arxiv = {2401.14554},
+}
+
 @inproceedings{knoedler2025rpcbf,
   title     = {RPCBF: Constructing Safety Filters Robust to Model Error and Disturbances via Policy Control Barrier Functions},
   author    = {Knoedler*, Luzia and So*, Oswin and Yin, Ji and Black, Mitchell and Serlin, Zachary and Tsiotras, Panagiotis and Alonso-Mora, Javier and Fan, Chuchu},
@@ -20,18 +32,6 @@
   year={2024},
   website={https://oswinso.xyz/rcppo},
   pdf={https://oswinso.xyz/assets/publications/So_2024_Solving_Minimum-Cost_Reach_Avoid_using_RL.pdf}
-}
-
-@article{zhang2024gcbf+,
-  abbr={T-RO},
-  title={Gcbf+: A neural graph control barrier function framework for distributed safe multi-agent control},
-  author={Zhang*, Songyuan and So*, Oswin and Garg, Kunal and Fan, Chuchu},
-  journal={IEEE Transactions on Robotics (Under Review)},
-  publisher={IEEE},
-  year={2024},
-  website={https://mit-realm.github.io/gcbfplus-website},
-  abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
-  arxiv = {2311.13714},
 }
 
 @article{garg2024learning,

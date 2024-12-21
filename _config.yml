@@ -18,7 +18,7 @@ last_updated: true # set to true if you want to display last updated in the foot
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
-resume_path: oswin_resume_2024.10.14.pdf
+resume_path: oswin_resume_2024.12.20.pdf
 
 # -----------------------------------------------------------------------------
 # RSS Feed
