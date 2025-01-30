@@ -12,7 +12,7 @@ profile:
 news: true
 selected_papers: false
 all_publications: true
-publication_years: [2024, 2023, 2022, 2021]
+publication_years: [2025, 2024, 2023, 2022, 2021]
 social: false
 ---
 
