@@ -34,7 +34,7 @@ See my
 <b>
     <a href="{{ site.resume_path | prepend: 'https://oswinso.github.io/assets/pdf/' }}" target="_blank">full CV</a>
 </b>
-here (updated January 2025).
+here (updated February 2025).
 
 <strong>Contact: </strong> <a href="mailto:oswinso@mit.edu">oswinso [at] mit [dot] edu</a>  
 <strong>Follow: </strong>
