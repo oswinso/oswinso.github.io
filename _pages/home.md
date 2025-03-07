@@ -1,6 +1,6 @@
 ---
 layout: home
-title: about
+title: Oswin So 苏隽文
 permalink: /
 description: >
     <h6>Safety for Autonomous Systems using Control + Machine Learning @ <a href="https://aeroastro.mit.edu/realm">REALM</a>, MIT AeroAstro</h6>
