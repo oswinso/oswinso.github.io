@@ -1,6 +1,29 @@
 ---
 ---
 
+@inproceedings{zhang2025solving,
+  abbr={RSS 2025},
+  title={},
+  author={Zhang, Songyuan* and So, Oswin* and Black, Mitchell and Serlin, Zachary and Fan, Chuchu},
+  booktitle={Robotics: Science and Systems},
+  abstract = {Tasks for multi-robot systems often require the robots to collaborate and complete a team goal while maintaining safety. This problem is usually formalized as a Constrained Markov decision process (CMDP), which targets minimizing a global cost and bringing the mean of constraint violation below a user-defined threshold. Inspired by real-world robotic applications, we define safety as zero constraint violation. While many safe multi-agent reinforcement learning (MARL) algorithms have been proposed to solve CMDPs, these algorithms suffer from unstable training in this setting. To tackle this, we use the epigraph form for constrained optimization to improve training stability and prove that the centralized epigraph form problem can be solved in a distributed fashion by each agent. This results in a novel centralized training distributed execution MARL algorithm which we name Def-MARL. Simulation experiments on 8 different tasks across 2 different simulators show that Def-MARL achieves the best overall performance, satisfies safety constraints, and maintains stable training. Real-world hardware experiments on Crazyflie quadcopters demonstrate the ability of Def-MARL to safely coordinate agents to complete complex collaborative tasks compared to other methods.},
+  year = {2025},
+  website = {https://mit-realm.github.io/def-marl/},
+  show_year = {true},
+}
+
+@inproceedings{yin2025safe,
+  abbr={RSS 2025},
+  title={Safe Beyond the Horizon: Efficient Sampling-based MPC with Neural Control Barrier Functions},
+  author={Ji, Yin* and So, Oswin* and Yu, Eric and Fan, Chuchu and Tsiotras, Panagiotis},
+  booktitle={Robotics: Science and Systems},
+  abstract = {A common problem when using model predictive control (MPC) in practice is the satisfaction of safety beyond the prediction horizon. While theoretical works have shown that safety can be guaranteed by enforcing a suitable terminal set constraint or a sufficiently long prediction horizon, these techniques are difficult to apply and thus rarely used by practitioners, especially in the case of general nonlinear dynamics. To solve this, we make a tradeoff between exact recursive feasibility, computational tractability, and applicability to black-box dynamics by learning an approximate discrete-time control barrier function and incorporating it into variational inference MPC (VIMPC), a sampling-based MPC paradigm. To handle the resulting state constraints, we further propose a new sampling strategy that greatly reduces the variance of the estimated optimal control, improving the sample efficiency and enabling real-time planning on CPU. The resulting Neural Shield-VIMPC (NS-VIMPC) controller yields substantial safety improvements compared to existing sampling-based MPC controllers, even under badly designed cost functions. We validate our approach in both simulation and real-world hardware experiments.},
+  year = {2025},
+  arxiv = {2502.15006},
+  show_year = {true},
+  url={https://arxiv.org/abs/2502.15006}
+}
+
 @article{so2025comment,
   title = {Comment(s) on “Control barrier functions for stochastic systems” [Automatica 130 (2021) 109688]},
   journal = {Automatica},
