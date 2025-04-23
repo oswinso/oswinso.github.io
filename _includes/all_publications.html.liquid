@@ -1,7 +1,0 @@
-<div class="publications">
-    <h2>Publications</h2>
-    {% for y in page.publication_years %}
-        <h2 class="year">{{ y }}</h2>
-        {% bibliography -f papers -q @*[year ={{ y }}]* %}
-    {% endfor %}
-</div>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+
+  Oswin  So
+
+
+  | Problems with Almost-Sure Guarantees of Stochastic CBFs.
+
+</title>
+<meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+<!-- Google SEO -->
+<meta name="google-site-verification" content="ApEtFZ-ae3RuUP4X8cdHEqqX9NJU9kRK_hWSaeSIsvs" />
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-github.css"
+  media=""
+  id="highlight_theme_light"
+>
+
+<!-- Styles -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="/blog/2023/stochastic-cbf-almost-sure/">
+
+
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ["[tex]/mathtools"]},
+    tex: {
+      tags: "ams",
+      packages: {"[+]": ["mathtools"]},
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {
+        T: "{^{\\top}}",
+      }
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+
+
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    <script src="/assets/js/distillpub/overrides.js"></script>
+    
+    <style type="text/css">
+      .theorem {
+    display: block;
+    font-style: italic;
+} .theorem:before {
+    content: "Theorem. ";
+    font-weight: bold;
+    font-style: normal;
+} .theorem[text]:before {
+    content: "Theorem (" attr(text) ")  ";
+} .false-theorem:before {
+  content: "False Theorem. ";
+  font-weight: bold;
+  font-style: normal;
+} .false-theorem[text]:before {
+  content: "False Theorem (" attr(text) ")  ";
+}
+
+    </style>
+    
+  </head>
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "Problems with Almost-Sure Guarantees of Stochastic CBFs.",
+      "description": "",
+      "published": "September 29, 2023",
+      "authors": [
+        
+        {
+          "author": "Oswin So",
+          "authorURL": "oswinso.xyz",
+          "affiliations": [
+            {
+              "name": "Massachusetts Institute of Technology",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  <body class="fixed-top-nav ">
+
+  <!-- Header -->
+  <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+            
+                <a class="navbar-brand title font-weight-lighter" href="https://oswinso.github.io/">
+                    <span class="font-weight-bold">Oswin</span>   So
+                </a>
+            
+            <!-- Navbar Toggle -->
+            <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse text-right" id="navbarNav">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <!-- About -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">
+                            about
+                            
+                        </a>
+                    </li>
+
+                    <!-- Resume -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://oswinso.github.io/assets/pdf/oswin_resume_2025.02.02.pdf" target="\_blank">CV</a>
+                    </li>
+
+                    
+                        <!-- Blog -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/blog/">
+                                blog
+                                
+                            </a>
+                        </li>
+                    
+                    <!-- Other pages -->
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="post distill">
+
+      <d-title>
+        <h1>Problems with Almost-Sure Guarantees of Stochastic CBFs.</h1>
+        <p></p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        <p>I’ve always found Andrew Clark’s proofs on Stochastic CBFs <d-cite key="clark2019control,clark2021control"></d-cite> to be very impressive.
+Specifically, it was very impressive that stochastic CBFs could guarantee that safety holds <em>almost-surely</em> for stochastic systems in continuous time. 
+In fact, a little too impressive. Consequently, while trying to see how the proof worked, I discovered a potential mistake in the proof related to the technicalities of stochastic processes.</p>
+
+<p>To lay the context, consider the following SDE (making the usual regularity assumptions to ensure existence).</p>
+
+<p>\begin{equation}
+    dx_t = \Big( f(x_t) + g(x_t) u_t \Big) dt + \sigma(x_t) dW_t
+\end{equation}</p>
+
+<p>Stochastic (zero)-CBFs are defined as a function $h$ that satisfies the following stochastic-analogue of the deterministic CBF condition.
+Namely, for all $x$ such that $h(x) &gt; 0$, there exists a $u$ satisfying the condition</p>
+
+<p>\begin{equation} \label{eq:scbf_condition}
+\frac{\partial h}{\partial x} \Big( f(x) + g(x) u \Big) + \frac{1}{2}\mathop{tr}\left[ \sigma \sigma^\mathsf{T} \frac{\partial^2 h}{\partial x^2} \right] \geq -h(x)
+\end{equation}</p>
+
+<p>Define the zero superlevel set of $h$ as $\mathcal{C}$, i.e., $\mathcal{C} \coloneqq \{ x \mid h(x) \geq 0 \}$
+Then, it is shown in <d-cite key="clark2021control"></d-cite> that the satisfaction of \eqref{eq:scbf_condition} guarantees that $\mathcal{C}$ is forward-invariant <em>almost-surely</em>:</p>
+
+<div class="false-theorem" text="Almost-Sure Safety of Stochastic CBFs">
+If $u$ satisfies \eqref{eq:scbf_condition}, then $\mathop{Pr}(x_t \in \mathcal{C}\; \forall t) = 1$ provided that $x_0 \in \mathcal{C}$.
+</div>
+
+<h2 id="problems-when-used-on-brownian-motion">Problems when used on Brownian Motion</h2>
+<p>To illustrate the problem in the proof, we first consider a simpler scenario by taking $f = 0, g=0, \sigma=1$, giving us the SDE</p>
+
+<p>\begin{equation}
+    dx_t = dW_t
+\end{equation}</p>
+
+<p>In other words, $x_t = W_t$ is exactly Brownian motion. If we next define the function $h$ as</p>
+
+<p>\begin{equation}
+    h(x) \coloneqq x
+\end{equation}</p>
+
+<p>We can then verify that \eqref{eq:scbf_condition} easily holds in this case, since, for $h(x) &gt; 0$,</p>
+
+<p>\begin{equation} \label{eq:scbf_condition_W}
+     0 \geq -h(x)
+\end{equation}</p>
+
+<p>In this case, $\mathcal{C} \coloneqq \{ x \mid x \geq 0 \}$. The theorem then reduces to the following <em>alarming</em> result (using that $x_t = W_t$).</p>
+
+<div class="false-theorem" text="Brownian Motion is Non-Negative Almost-Surely.">
+    Suppose $W_t \geq 0$. Then, $\mathop{Pr}(W_t \geq 0\; \forall t) = 1$.
+</div>
+
+<p>However, since Brownian motion has unbounded support, we know that this cannot be true. To try and see how we came to this conclusion, we now trace through the proof technique from <d-cite key="clark2021control"></d-cite> applied to this simple example.</p>
+
+<h2 id="tracing-through-the-proof">Tracing through the proof</h2>
+<p>We now follow the proof from <d-cite key="clark2021control"></d-cite> for this special case of having $x=W$.</p>
+
+<blockquote>
+It is sufficient to show that, for any $t &gt; 0$, and any $\epsilon &gt; 0$, and any $\delta \in (0, 1)$,
+
+\begin{equation}
+    \mathop{Pr}\left( \inf_{t' &lt; t} W(t') &lt; -\epsilon \right) &lt; \delta.
+\end{equation}
+
+Let $\theta = \min\left\{ \frac{\delta \epsilon}{2t}, W(0) \right\}$. We now construct a sequence of <strong>stopping times</strong> $\eta_i$ and $\zeta_i$ for $i=0, 1, \dots$ as
+
+\begin{align}
+    \eta_0 &amp;= 0, \quad \zeta_0 = \inf\Big\{ t : W(t) &gt; \theta \Big\}, \newline
+    \eta_i &amp;= \inf \Big\{ t : W(t) &lt; \theta, \; t &gt; \zeta_{i-1} \Big\}, \quad i = 1, 2, \dots \newline
+    \zeta_i &amp;= \inf \Big\{ t : W(t) &gt; \theta, \; t &gt; \eta_{i-1} \Big\}, \quad i = 1, 2, \dots \newline
+\end{align}
+</blockquote>
+
+<p>One problem here is that the random variables $\zeta_1$ and $\eta_i, \zeta_i$ for $i&gt;0$ are not elements of $\mathcal{F}_t$ but rather $\mathcal{F}_t+$, since the sets $\{ x \mid x &gt; \theta \}$ are not closed.
+Consequently, these random variables are <strong>not</strong> stopping times.</p>
+
+<p>However, this is not the only problem. For now, we assume this does not matter and continue with the proof.</p>
+
+<blockquote>
+Define the supermartingale $U_t$ as
+
+\begin{equation}
+    U_t = \theta + \sum_{i=0}^\infty \left( \int_{\eta_i \land t}^{\zeta_i \land t} -\theta \, d\tau + \int_{\eta_i \land t}^{\zeta_i \land t} dW_\tau \right) 
+\end{equation}
+
+such that
+
+\begin{equation}
+    \mathbb{E}[U_t \mid U_s] = U_s + \mathbb{E}\left[ \sum_{i=0}^\infty \int_{\eta_i \land t}^{\zeta_i \land t} -\theta \, d\tau \right] \leq U_s.
+\end{equation}
+
+We will prove by induction that $W(t) \geq U_t$ and $U_t \leq \theta$. Initially, $U_0 = \theta \leq W(0)$ by construction.
+
+<div>
+<strong>Case 1:</strong>
+</div>
+Suppose that the result holds up to time $t \in [\eta_i, \zeta_i]$ for all $i \geq 0$. Then, $W_t$ and $U_t$ are given by
+
+\begin{align}
+    W_t &amp;= W_{\eta_i} + \int_{\eta_i}^t dW_\tau \newline
+    U_t &amp;= U_{\eta_i} + \int_{\eta_i}^t -\theta\, d\tau + \int_{\eta_i}^t dW_\tau
+\end{align}
+
+Since $W(t) \leq \theta$ for $t \in [\eta_i, \zeta_i]$ by definition of $\eta$ and $\zeta$, \eqref{eq:scbf_condition_W} implies that
+
+\begin{equation}
+    0 \geq -h(W(t)) = -W(t) \geq -\theta \quad \implies \quad \theta \geq 0.
+\end{equation}
+
+Hence, combining this with the inductive hypothesis $W_{\eta_i} \geq U_{\eta_i}$ gives us
+
+\begin{equation}
+    W_t - U_t = \left( W_{\eta_i} - U_{\eta_i} \right) + \int_{\eta_i}^t \theta\, d\tau \geq 0.
+\end{equation}
+
+Thus, $W(t) \geq U_t$. Furthermore, for $t \in [\eta_i, \zeta_i]$, $W(t) \leq \theta$, hence $U_t \leq \theta$, completing the inductive step for this case.
+
+<div>
+<strong>Case 2:</strong>
+</div>
+Now, suppose that the result holds up to time $t \in [\zeta_i, \eta_{i+1}]$, we have that
+
+\begin{equation}
+    U_t = U_{\zeta_i} \leq W(\zeta_i) = \theta \leq W(t)
+\end{equation}
+
+by definition of $\zeta_i$. Hence, by induction,
+
+\begin{equation} \label{eq:induction_conclusion}
+    W(t) \geq U_t, \quad \text{and} \quad U_t \leq \theta.
+\end{equation}
+</blockquote>
+
+<p>One problem with this proof by induction is that it is not explicit <em>for what values of $t$</em> this statement is valid for.
+The proof takes this to be all $t \geq 0$, but the structure of the induction means that this only holds over the union of the intervals $[\eta_i, \zeta_i]$ and $[\zeta_i, \eta_{i+1}]$.
+For this to be equal to $t \geq 0$ requires that $\lim_{i \to \infty} \xi_i = \lim_{i \to \infty} \zeta_i = \infty$.</p>
+
+<p>However, this is <strong>not</strong> the case, since it is possible that $\eta_i = \zeta_i = \eta_1$ for all $i \geq 1$.
+Actually, this happens <em>almost surely</em>, since $W$ will go above and below $\theta$ immediately after hitting $\theta$.
+Without loss of generality, suppose $W(0) = \theta$. Then,</p>
+
+<p>\begin{equation}
+    \inf\{ t &gt; 0 \mid W(t) &gt; \theta \} = \inf\{ t &gt; 0 \mid W(t) &lt; \theta \} = 0,\; \textrm{a.s.}
+\end{equation}</p>
+
+<p>The proof then continues by assuming that \eqref{eq:induction_conclusion} to be true for all $t \geq 0$, which then leads to the incorrect conclusion.</p>
+
+<div hidden="">
+<blockquote>
+Since $U_t \leq W(t)$, we have that
+
+\begin{equation}
+    \mathop{Pr}\left( \inf_{t' &lt; t} W(t') &lt; -\epsilon\right) \leq \mathop{Pr}\left( \inf_{t' &lt; t} U(t') &lt; -\epsilon\right)
+\end{equation}
+
+Applying Doob's Martingale Inequality gives us that
+
+\begin{equation}
+    \mathop{Pr}\left( \inf_{0 \leq t \leq T} U_t &lt; -\epsilon \right) \leq \frac{\mathbb{E}[\max(-U_T, 0)]}{\epsilon}.
+\end{equation}
+
+We can bound $\mathbb{E}[U_T]$ by noting that
+
+\begin{equation}
+    \mathbb{E}[U_T] = \theta + \mathbb{E}\left[ \sum_{i=0}^\infty \int_{\eta_i \land t}^{\zeta_i \land t} -\theta \, d\tau \right] \geq \theta - \theta T
+\end{equation}
+
+We also know that $U_T \leq \theta$ almost surely, hence $\mathbb{E}[\max(U_T, 0)] \leq \theta$.
+Combining these two statements gives us that
+
+\begin{equation}
+    \mathbb{E}[\max(-U_T, 0)] \leq \theta -\theta + \theta T = \theta T
+\end{equation}
+
+which gives us
+\begin{align}
+P\left( \inf_{0 \leq t \leq T} B_t &lt; -\epsilon \right) \leq \frac{\theta T}{\epsilon} = \frac{\delta \epsilon}{2T} \frac{T}{\epsilon} &lt; \delta
+\end{align}
+
+</blockquote>
+</div>
+
+<h1 id="citation">Citation</h1>
+<p>Cited as:</p>
+<blockquote>
+  <p>So, Oswin. (Sep 2023). Problems with Almost-Sure Guarantees of Stochastic CBFs. Oswin’s Blog. https://oswinso.xyz/blog/2023/stochastic-cbf-almost-sure/</p>
+</blockquote>
+
+<p>Or</p>
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@article</span><span class="p">{</span><span class="nl">so2023potential</span><span class="p">,</span>
+  <span class="na">title</span>   <span class="p">=</span> <span class="s">"Problems with Almost-Sure Guarantees of Stochastic CBFs"</span><span class="p">,</span>
+  <span class="na">author</span>  <span class="p">=</span> <span class="s">"So, Oswin"</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">"oswinso.xyz"</span><span class="p">,</span>
+  <span class="na">year</span>    <span class="p">=</span> <span class="s">"2023"</span><span class="p">,</span>
+  <span class="na">month</span>   <span class="p">=</span> <span class="s">"Sep"</span><span class="p">,</span>
+  <span class="na">url</span>     <span class="p">=</span> <span class="s">"https://oswinso.xyz/blog/2023/stochastic-cbf-almost-sure/"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+    <footer class="fixed-bottom">
+        <div class="container text-center mt-0">
+            ©
+            Copyright 2025 Oswin  So.
+            
+            
+            
+                Last updated: April 23, 2025.
+            
+        </div>
+    </footer>
+
+
+
+  </body>
+
+  <d-bibliography src="/assets/bibliography/2023-09-29-stochastic-almost-sure.bib">
+  </d-bibliography>
+
+</html>

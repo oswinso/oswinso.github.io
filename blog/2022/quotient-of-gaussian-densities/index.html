@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://oswinso.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Oswin  So
 
 
-  | Page not found
+  | Quotient of Gaussian Densities
 
 </title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -46,7 +46,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/blog/2022/quotient-of-gaussian-densities/">
 
 
 
@@ -91,7 +91,7 @@
 
                     
                         <!-- Blog -->
-                        <li class="nav-item ">
+                        <li class="nav-item active">
                             <a class="nav-link" href="/blog/">
                                 blog
                                 
@@ -139,17 +139,128 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
+      
+
+
+
+
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">Quotient of Gaussian Densities</h1>
+    <p class="post-meta">February 17, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/math">
+          <i class="fas fa-hashtag fa-sm"></i> math</a>  
+          
+      
+
+      
+
+    </p>
   </header>
 
-  <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://oswinso.github.io/">here</a>.</p>
+  <article class="post-content">
+    <h1 id="statement">Statement</h1>
+
+<p>Let $p$ and $q$ denote Gaussian pdfs with the form</p>
+
+<p>\begin{align}
+p(x) &amp;= Z_p^{-1} \exp\left( -\frac{1}{2} (x-\mu_p)\T \Sigma_p^{-1} (x-\mu_p) \right) \newline
+q(x) &amp;= Z_q^{-1} \exp\left( -\frac{1}{2} (x-\mu_q)\T \Sigma_q^{-1} (x-\mu_q) \right)
+\end{align}</p>
+
+<p>Our goal is to show that the quotient $\frac{p(x)}{q(x)}$ takes the form</p>
+
+<p>\begin{equation}
+\frac{p(x)}{q(x)} = w^{-1} \exp \left( -\frac{1}{2} (x - \mu)\T \Sigma^{-1} (x-\mu) \right)
+\end{equation}</p>
+
+<p>where
+\begin{align}
+\Sigma &amp;\coloneqq (\Sigma_p^{-1} - \Sigma_q^{-1})^{-1} \newline
+\mu &amp;\coloneqq \Sigma (\Sigma_p^{-1} \mu_p - \Sigma_q^{-1} \mu_q) \newline
+w^{-1} &amp;\coloneqq \frac{ \lvert \Sigma_p \rvert^{\frac{1}{2}} }{ \lvert \Sigma_p\rvert^{\frac{1}{2}} }
+\exp\left(-\frac{1}{2} \Big[ \mu_p\T \Sigma_p^{-1} \mu_p - \mu_q\T \Sigma_q^{-1} - 
+\mu\T \Sigma^{-1} \mu
+\Big] \right)
+\end{align}</p>
+
+<p>Note that $\frac{p(x)}{q(x)}$ is <strong>not normalized</strong> and hence is not necessarily a probability density function.</p>
+
+<h1 id="derivation">Derivation</h1>
+
+<p>We first note the formula for completing the square:</p>
+
+<p>\begin{equation}
+\frac{1}{2} x\T P x - q\T x
+= \frac{1}{2} (x - P^{-1} q)\T P (x - P^{-1} q) - \frac{1}{2} q\T P^{-1} q
+\end{equation}</p>
+
+<p>Now,</p>
+
+<p>\begin{align}
+&amp;\mathrel{\phantom{=}} \frac{1}{2} (x - \mu_p)\T \Sigma_p^{-1} (x - \mu_p) -
+\frac{1}{2} (x - \mu_q)\T \Sigma_q^{-1} (x - \mu_q) \newline
+&amp;= \frac{1}{2} x\T (\Sigma_p^{-1} - \Sigma_q^{-1}) x -
+(\Sigma_p^{-1} \mu_p - \Sigma_q^{-1} \mu_q)\T x +
+    \frac{1}{2} \mu_p\T \Sigma_p^{-1} \mu_p -
+    \frac{1}{2} \mu_q\T \Sigma_q^{-1} \mu_q
+\end{align}
+\shortintertext{Defining $m \coloneqq \Sigma_p^{-1} \mu_p - \Sigma_q^{-1} \mu_q$ and $\Sigma$ as above,}
+\begin{align}
+&amp;= \frac{1}{2} x\T \Sigma^{-1} x - m\T x + 
+    \frac{1}{2} \mu_p\T \Sigma_p^{-1} \mu_p - 
+    \frac{1}{2} \mu_q\T \Sigma_q^{-1} \mu_q \newline
+&amp;= \frac{1}{2} (x - \mu)\T \Sigma^{-1} (x - \mu) -
+    \frac{1}{2} \mu\T \Sigma^{-1} \mu +
+    \frac{1}{2} \mu_p\T \Sigma_p^{-1} \mu_p -
+    \frac{1}{2} \mu_q\T \Sigma_q^{-1} \mu_q \newline
+&amp;= \frac{1}{2} \Big[ (x - \mu)\T \Sigma^{-1} (x - \mu) +
+    \mu_p\T \Sigma_p^{-1} \mu_p - 
+    \mu_q\T \Sigma_q^{-1} -
+    \mu\T \Sigma^{-1} \mu \Big]
+\end{align}</p>
+
+<p>Finally,</p>
+
+<p>\begin{align}
+\frac{ p(x) }{ q(x) }
+&amp;= \frac{ \lvert \Sigma_q \rvert^{\frac{1}{2}} }{ \lvert \Sigma_p \rvert^{\frac{1}{2}} }
+\exp\left( -\frac{1}{2} \Big[
+(x - \mu_p)\T \Sigma_p^{-1} (x - \mu_p) -
+(x - \mu_q)\T \Sigma_q^{-1} (x - \mu_q)
+\Big]\right) \newline
+&amp;= \frac{ \lvert \Sigma_q \rvert^{\frac{1}{2}} }{ \lvert \Sigma_p \rvert^{\frac{1}{2}} }
+\exp\left(-\frac{1}{2} \Big[
+(x - \mu)\T \Sigma^{-1} (x - \mu) +
+    \mu_p\T \Sigma_p^{-1} \mu_p -
+    \mu_q\T \Sigma_q^{-1} -
+    \mu\T \Sigma^{-1} \mu
+\Big]\right) \newline
+&amp;= w^{-1} \exp\left( -\frac{1}{2} (x - \mu)\T \Sigma^{-1} (x - \mu) \right)
+\end{align}</p>
+
+<p>where</p>
+
+<p>\begin{equation}
+w^{-1} \coloneqq
+\frac{ \lvert \Sigma_q \rvert^{\frac{1}{2}} }{ \lvert \Sigma_p \rvert^{\frac{1}{2}} }
+\exp\left(-\frac{1}{2} \Big[
+\mu_p\T \Sigma_p^{-1} \mu_p -
+    \mu_q\T \Sigma_q^{-1} -
+    \mu\T \Sigma^{-1} \mu
+\Big] \right)
+\end{equation}</p>
 
   </article>
+
+  
 
 </div>
 
