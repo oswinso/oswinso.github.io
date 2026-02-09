@@ -1,0 +1,337 @@
+---
+---
+
+@inproceedings{
+sharpless2026bellman,
+  abbr={In Submission},
+  title={Bellman Value Decomposition for Task Logic in Safe Optimal Control},
+  author={Sharpless*, William and So*, Oswin and Hirsch, Dylan and Herbert, Sylvia and Fan, Chuchu},
+  booktitle={Submission},
+  abstract={Real-world tasks involve nuanced combinations of goal and safety specifications, which often directly compete. In high dimensions, the challenge is exacerbated: formal automata become cumbersome, and the combination of sparse rewards tends to require laborious tuning. In this work, we consider the structure of the Bellman Value as a means to naturally organize the problem for improved automatic performance without introducing additional abstractions. Namely, we prove the Bellman Value for a complex task defined in temporal logic can be decomposed into a graph of Bellman Values, where the graph is connected by a set of well-studied Bellman equations (BEs): the Reach-Avoid BE, the Avoid BE, and a novel type, the Reach-Avoid-Loop BE. From this perspective, we design a specialized PPO variant, Value-Decomposition PPO (VDPPO) that uses a single learned representation by embedding the decomposed Value graph. We conduct a variety of simulated and real multi-objective experiments, including delivery and herding, to test our method on diverse high-dimensional systems involving heterogeneous teams and complex agents. Ultimately, we find this approach greatly improves performance over existing baselines, balancing safety and liveness automatically. },
+  pdf={https://oswinso.xyz/assets/publications/vdppo.pdf},
+  selected={true},
+  preview = {vdppo.png}
+}
+
+@inproceedings{
+so2026discrete,
+  abbr={ICLR 2026},
+  title={Discrete Adjoint Matching},
+  author={So, Oswin and Karrer, Brian and Fan, Chuchu and Chen, Ricky T. Q. and Liu, Guan-Horng},
+  booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
+  year={2026},
+  url={https://openreview.net/forum?id=VXB4xxAgOf},
+  abstract={Computation methods for solving entropy-regularized reward optimization—a class of problems widely used for fine-tuning generative models—have advanced rapidly. Among those, Adjoint Matching (AM, Domingo-Enrich et al., 2025) has proven highly effective in continuous state spaces with differentiable rewards. Transferring these practical successes to discrete generative modeling, however, remains particularly challenging and largely unexplored, mainly due to the drastic shift in generative model classes to discrete state spaces, which are nowhere differentiable. In this work, we propose Discrete Adjoint Matching (DAM)—a discrete variant of AM for fine-tuning discrete generative models characterized by Continuous-Time Markov Chains, such as diffusion-based large language models. The core of DAM is the introduction of discrete adjoint—an estimator of the optimal solution to the original problem but formulated on discrete domains—from which standard matching frameworks can be applied. This is derived via a purely statistical standpoint, in contrast to the control-theoretic viewpoint in AM, thereby opening up new algorithmic opportunities for general adjoint-based estimators. We showcase DAM’s effectiveness on synthetic and mathematical reasoning tasks. },
+  selected={true},
+  preview = {dam.png}
+}
+
+@inproceedings{
+so2026feasibility,
+  abbr={ICLR 2026},
+  title={Solving Parameter-Robust Avoid Problems with Unknown Feasibility using Reinforcement Learning},
+  author={So*, Oswin and Yu*, Eric Yang and Zhang, Songyuan and Cleaveland, Matthew and Black, Mitchell and Fan, Chuchu},
+  booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
+  year={2026},
+  url={https://openreview.net/forum?id=5jjCUWg6VV},
+  abstract={Recent advances in deep reinforcement learning (RL) have achieved strong results on high-dimensional control tasks, but applying RL to reachability problems raises a fundamental mismatch: reachability seeks to maximize the set of states from which a system remains safe indefinitely, while RL optimizes expected returns over a user-specified distribution. This mismatch can result in policies that perform poorly on low-probability states that are still within the safe set. A natural alternative is to frame the problem as a robust optimization over a set of initial conditions that specify the initial state, dynamics and safe set, but whether this problem has a solution depends on the feasibility of the specified set, which is unknown a priori. We propose Feasibility-Guided Exploration (FGE), a method that simultaneously identifies a subset of feasible initial conditions under which a safe policy exists, and learns a policy to solve the reachability problem over this set of initial conditions. Empirical results demonstrate that FGE learns policies with over 50% more coverage than the best existing method for challenging initial conditions across tasks in the MuJoCo simulator and the Kinetix simulator with pixel observations. },
+  selected={true},
+  preview = {fge.jpg}
+}
+
+@inproceedings{
+zhang2026reflected,
+  abbr={ICLR 2026},
+  title={ReFORM: Reflected Flows for On-support Offline RL via Noise Manipulation},
+  author={Zhang, Songyuan and So, Oswin and Ahmad, H. M. Sabbir and Yu, Eric Yang and Cleaveland, Matthew and Black, Mitchell and Fan, Chuchu},
+  booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
+  year={2026},
+  url={https://openreview.net/forum?id=YvFsyRReeN},
+  website={https://mit-realm.github.io/reform/},
+  abstract={Offline reinforcement learning (RL) aims to learn the optimal policy from a fixed
+behavior policy dataset without additional environment interaction. One com-
+mon challenge that arises in this setting is the out-of-distribution (OOD) error,
+which occurs when the policy leaves the training distribution. Prior methods pe-
+nalize a statistical distance term to keep the policy close to the behavior policy, but
+this constrains policy improvement and may not completely prevent OOD actions.
+Another challenge is that the optimal policy distribution can be multimodal and
+difficult to represent. Recent works apply diffusion or flow policies to address this
+problem, but it is unclear how to avoid OOD errors while retaining policy expres-
+siveness. We propose ReFORM, an offline RL method based on flow policies that
+enforces the less restrictive support constraint by construction. ReFORM learns a
+BC flow policy with a bounded source distribution to capture the support of the
+action distribution, then optimizes a reflected flow that generates bounded noise
+for the BC flow while keeping the support, to maximize the performance. Across
+40 challenging tasks from the OGBench benchmark with datasets of varying qual-
+ity and using a constant set of hyperparameters for all tasks, ReFORM dominates
+all baselines with hand-tuned hyperparameters on the performance profile curves.},
+  arxiv = {2602.05051},
+  selected={true},
+  preview = {reform.png}
+}
+
+@inproceedings{zhang2025solving,
+  abbr={RSS 2025},
+  title={Solving Multi-Agent Safe Optimal Control with Distributed Epigraph Form MARL},
+  author={Zhang*, Songyuan and So*, Oswin and Black, Mitchell and Serlin, Zachary and Fan, Chuchu},
+  booktitle={Robotics: Science and Systems (RSS)},
+  abstract = {Tasks for multi-robot systems often require the robots to collaborate and complete a team goal while maintaining safety. This problem is usually formalized as a Constrained Markov decision process (CMDP), which targets minimizing a global cost and bringing the mean of constraint violation below a user-defined threshold. Inspired by real-world robotic applications, we define safety as zero constraint violation. While many safe multi-agent reinforcement learning (MARL) algorithms have been proposed to solve CMDPs, these algorithms suffer from unstable training in this setting. To tackle this, we use the epigraph form for constrained optimization to improve training stability and prove that the centralized epigraph form problem can be solved in a distributed fashion by each agent. This results in a novel centralized training distributed execution MARL algorithm which we name Def-MARL. Simulation experiments on 8 different tasks across 2 different simulators show that Def-MARL achieves the best overall performance, satisfies safety constraints, and maintains stable training. Real-world hardware experiments on Crazyflie quadcopters demonstrate the ability of Def-MARL to safely coordinate agents to complete complex collaborative tasks compared to other methods.},
+  year = {2025},
+  arxiv = {2504.15425},
+  website = {https://mit-realm.github.io/def-marl/},
+  show_year = {true},
+  url={https://arxiv.org/abs/2504.15425},
+  award={Outstanding Student Paper Award, 0.6%},
+  selected={true},
+  preview = {defmarl.jpg}
+}
+
+@inproceedings{yin2025safe,
+  abbr={RSS 2025},
+  title={Safe Beyond the Horizon: Efficient Sampling-based MPC with Neural Control Barrier Functions},
+  author={Ji, Yin* and So, Oswin* and Yu, Eric and Fan, Chuchu and Tsiotras, Panagiotis},
+  booktitle={Robotics: Science and Systems (RSS)},
+  abstract = {A common problem when using model predictive control (MPC) in practice is the satisfaction of safety beyond the prediction horizon. While theoretical works have shown that safety can be guaranteed by enforcing a suitable terminal set constraint or a sufficiently long prediction horizon, these techniques are difficult to apply and thus rarely used by practitioners, especially in the case of general nonlinear dynamics. To solve this, we make a tradeoff between exact recursive feasibility, computational tractability, and applicability to black-box dynamics by learning an approximate discrete-time control barrier function and incorporating it into variational inference MPC (VIMPC), a sampling-based MPC paradigm. To handle the resulting state constraints, we further propose a new sampling strategy that greatly reduces the variance of the estimated optimal control, improving the sample efficiency and enabling real-time planning on CPU. The resulting Neural Shield-VIMPC (NS-VIMPC) controller yields substantial safety improvements compared to existing sampling-based MPC controllers, even under badly designed cost functions. We validate our approach in both simulation and real-world hardware experiments.},
+  year = {2025},
+  arxiv = {2502.15006},
+  show_year = {true},
+  url={https://arxiv.org/abs/2502.15006}
+}
+
+@article{so2025comment,
+  title = {Comment(s) on “Control barrier functions for stochastic systems” [Automatica 130 (2021) 109688]},
+  journal = {Automatica},
+  abbr={Automatica},
+  pages = {112185},
+  year = {2025},
+  issn = {0005-1098},
+  doi = {https://doi.org/10.1016/j.automatica.2025.112185},
+  url = {https://www.sciencedirect.com/science/article/pii/S0005109825000779},
+  website = {https://www.sciencedirect.com/science/article/pii/S0005109825000779?dgcid=author},
+  author = {Oswin So and Chuchu Fan},
+  keywords = {Safe control, Stochastic control, Stochastic differential equations},
+  abstract = {It is shown that Theorem 3 of Clark (2021) is flawed. The proof of Theorem 2 in Clark (2021) relies on the same proof technique and is thus also flawed.}
+}
+
+@inproceedings{zhang2025discrete,
+  abbr={ICLR 2025},
+  title={Discrete {GCBF} Proximal Policy Optimization for Multi-agent Safe Optimal Control},
+  author={Zhang*, Songyuan and So*, Oswin and Black, Mitchell and Fan, Chuchu},
+  booktitle={The Thirteenth International Conference on Learning Representations (ICLR)},
+  year={2025},
+  url={https://openreview.net/forum?id=1X1R7P6yzt},
+  website={https://mit-realm.github.io/dgppo/},
+  abstract={Control policies that can achieve high task performance and satisfy safety contraints are desirable for any system, including multi-agent systems (MAS). One promising technique for ensuring the safety of MAS is distributed control barrier functions (CBF). However, it is difficult to design distributed CBF-based policies for MAS that can tackle unknown discrete-time dynamics, partial observability, changing neighborhoods, and input constraints, especially when a distributed high-performance nominal policy that can achieve the task is unavailable. To tackle these challenges, we propose DGPPO, a new framework that simultaneously learns both a discrete graph CBF which handles neighborhood changes and input constraints, and a distributed high-performance safe policy for MAS with unknown discrete-time dynamics. We empirically validate our claims on a suite of multi-agent tasks spanning three different simulation engines. The results suggest that, compared with existing methods, our DGPPO framework obtains policies that achieve high task performance (matching baselines that ignore the safety constraints), and high safety rates (matching the most conservative baselines), with a constant set of hyperparameters across all environments.},
+  pdf={https://openreview.net/pdf?id=1X1R7P6yzt},
+  selected = {true},
+  preview = {dgppo.jpg}
+}
+
+@article{zhang2024gcbf+,
+  abbr={T-RO},
+  title={GCBF+: A neural graph control barrier function framework for distributed safe multi-agent control},
+  author={Zhang*, Songyuan and So*, Oswin and Garg, Kunal and Fan, Chuchu},
+  journal={IEEE Transactions on Robotics (T-RO)},
+  publisher={IEEE},
+  year={2024},
+  website={https://mit-realm.github.io/gcbfplus-website},
+  abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
+  arxiv = {2401.14554},
+  selected={true},
+  preview = {gcbf+.jpeg}
+}
+
+@article{knoedler2025safety,
+  title     = {Safety on the Fly: Constructing Robust Safety Filters via Policy Control Barrier Functions at Runtime},
+  author    = {Knoedler*, Luzia and So*, Oswin and Yin, Ji and Black, Mitchell and Serlin, Zachary and Tsiotras, Panagiotis and Alonso-Mora, Javier and Fan, Chuchu},
+  journal   = {IEEE Robotics and Automation Letters (RAL)},
+  year      = {2025},
+  publisher={IEEE},
+  website={https://oswinso.xyz/rpcbf},
+  pdf={https://autonomousrobots.nl/assets/files/publications/25-knoedler-ral.pdf}
+}
+
+@inproceedings{so2024solving,
+  abbr={NeurIPS 2024},
+  title={Solving Minimum-Cost Reach Avoid using Reinforcement Learning},
+  author={So*, Oswin and Ge*, Cheng and Fan, Chuchu},
+  booktitle={Thirty-Eighth Conference on Neural Information Processing Systems (NeurIPS)},
+  abstract={Current reinforcement-learning methods are unable to directly learn policies that solve the minimum cost reach-avoid problem to minimize cumulative costs subject to the constraints of reaching the goal and avoiding unsafe states, as the structure of this new optimization problem is incompatible with current methods. Instead, a surrogate problem is solved where all objectives are combined with a weighted sum. However, this surrogate objective results in suboptimal policies that do not directly minimize the cumulative cost. In this work, we propose RC-PPO, a reinforcement-learning-based method for solving the minimum-cost reach-avoid problem by using connections to Hamilton-Jacobi reachability. Empirical results demonstrate that RC-PPO learns policies with comparable goal-reaching rates to while achieving up to 57% lower cumulative costs compared to existing methods on a suite of minimum-cost reach-avoid benchmarks on the Mujoco simulator.},
+  show_year = {true},
+  year={2024},
+  website={https://oswinso.xyz/rcppo},
+  pdf={https://oswinso.xyz/assets/publications/So_2024_Solving_Minimum-Cost_Reach_Avoid_using_RL.pdf},
+  selected={true},
+  preview = {rcppo.jpg}
+}
+
+@article{garg2024learning,
+  abbr={ARC},
+  title={Learning safe control for multi-robot systems: Methods, verification, and open challenges},
+  author={Garg, Kunal and Zhang, Songyuan and So, Oswin and Dawson, Charles and Fan, Chuchu},
+  journal={Annual Reviews in Control},
+  volume={57},
+  pages={100948},
+  year={2024},
+  abstract={In this survey, we review the recent advances in control design methods for robotic multi-agent systems (MAS), focussing on learning-based methods with safety considerations. We start by reviewing various notions of safety and liveness properties, and modeling frameworks used for problem formulation of MAS. Then we provide a comprehensive review of learning-based methods for safe control design for multi-robot systems. We start with various types of shielding-based methods, such as safety certificates, predictive filters, and reachability tools. Then, we review the current state of control barrier certificate learning in both a centralized and distributed manner, followed by a comprehensive review of multi-agent reinforcement learning with a particular focus on safety. Next, we discuss the state-of-the-art verification tools for the correctness of learning-based methods. Based on the capabilities and the limitations of the state of the art methods in learning and verification for MAS, we identify various broad themes for open challenges: how to design methods that can achieve good performance along with safety guarantees; how to decompose single-agent based centralized methods for MAS; how to account for communication-related practical issues; and how to assess transfer of theoretical guarantees to practice.},
+  publisher={Elsevier},
+  arxiv = {2311.13714},
+  url={https://www.sciencedirect.com/science/article/pii/S1367578824000178}
+}
+
+@inproceedings{so2024train,
+    abbr={ICRA 2024},
+    author={So, Oswin and Serlin, Zachary and Mann, Makai and Gonzales, Jake and Rutledge, Kwesi and Roy, Nicholas and Fan, Chuchu},
+    title={How to train your neural control barrier function: Learning safety filters for complex input-constrained systems},
+    booktitle = {2024 International Conference on Robotics and Automation (ICRA)},
+    year      = {2024},
+    abstract={Control barrier functions (CBF) have become popular as a safety filter to guarantee the safety of nonlinear dynamical systems for arbitrary inputs. However, it is difficult to construct functions that satisfy the CBF constraints for high relative degree systems with input constraints. To address these challenges, recent work has explored learning CBFs using neural networks via neural CBF (NCBF). However, such methods face difficulties when scaling to higher dimensional systems under input constraints. In this work, we first identify challenges that NCBFs face during training. Next, to address these challenges, we propose policy neural CBF (PNCBF), a method of constructing CBFs by learning the value function of a nominal policy, and show that the value function of the maximum-over-time cost is a CBF. We demonstrate the effectiveness of our method in simulation on a variety of systems ranging from toy linear systems to an F-16 jet with a 16-dimensional state space. Finally, we validate our approach on a two-agent quadcopter system on hardware under tight input constraints.},
+    arxiv = {2310.15478},
+    website = {https://mit-realm.github.io/efppo},
+    url={https://arxiv.org/abs/2310.15478},
+    selected={true},
+    preview = {pncbf.gif}
+}
+
+@inproceedings{so2023solving,
+  abbr={RSS 2023},
+  title={Solving Stabilize-Avoid Optimal Control via Epigraph Form and Deep Reinforcement Learning},
+  author={So, Oswin and Fan, Chuchu},
+  booktitle={Robotics: Science and Systems (RSS)},
+  abstract = {Tasks for autonomous robotic systems commonly require stabilization to a desired region while maintaining safety specifications. However, solving this multi-objective problem is challenging when the dynamics are nonlinear and high-dimensional, as traditional methods do not scale well and are often limited to specific problem structures. To address this issue, we propose a novel approach to solve the stabilize-avoid problem via the solution of an infinite-horizon constrained optimal control problem (OCP). We transform the constrained OCP into epigraph form and obtain a two-stage optimization problem that optimizes over the policy in the inner problem and over an auxiliary variable in the outer problem. We then propose a new method for this formulation that combines an on-policy deep reinforcement learning algorithm with neural network regression. Our method yields better stability during training, avoids instabilities caused by saddle-point finding, and is not restricted to specific requirements on the problem structure compared to more traditional methods. We validate our approach on different benchmark tasks, ranging from low-dimensional toy examples to an F16 fighter jet with a 17-dimensional state space. Simulation results show that our approach consistently yields controllers that match or exceed the safety of existing methods while providing ten-fold increases in stability performance from larger regions of attraction.},
+  year = {2023},
+  arxiv = {2305.14154},
+  website = {https://mit-realm.github.io/efppo},
+  show_year = {true},
+  url={https://arxiv.org/abs/2305.14154},
+  selected={true},
+  preview = {efppo.gif}
+}
+
+@inproceedings{so2022mpogames,
+    abbr={ICRA 2023},
+    author    = {So, Oswin and Drews, Paul and Balch, Thomas and Dimitrov, Velin and Rosman, Guy and Theodorou, Evangelos A.},
+    title     = {MPOGames: Efficient Multimodal Partially Observable Dynamic Games},
+    booktitle = {2023 IEEE International Conference on Robotics and Automation (ICRA)},
+    year      = {2023},
+    abstract = {Game theoretic methods have become popular for planning and prediction in situations involving rich multi-agent interactions. However, these methods often assume the existence of a single local Nash equilibria and are hence unable to handle uncertainty in the intentions of different agents. While maximum entropy (MaxEnt) dynamic games try to address this issue, practical approaches solve for MaxEnt Nash equilibria using linear-quadratic approximations which are restricted to unimodal responses and unsuitable for scenarios with multiple local Nash equilibria. By reformulating the problem as a POMDP, we propose MPOGames, a method for efficiently solving MaxEnt dynamic games that captures the interactions between local Nash equilibria. We show the importance of uncertainty-aware game theoretic methods via a two-agent merge case study. Finally, we prove the real-time capabilities of our approach with hardware experiments on a 1/10th scale car platform.},
+    arxiv = {2210.10814},
+    doi={10.1109/ICRA48891.2023.10160342}},
+    show_year = {false},
+    url={https://arxiv.org/abs/2210.10814}
+}
+
+@inproceedings{so2022data,
+    abbr={ML4PS 2022},
+    title={Data-driven discovery of non-Newtonian astronomy via learning non-Euclidean Hamiltonian},
+    author={So, Oswin and Li, Gongjie and Theodorou, Evangelos A and Tao, Molei},
+    booktitle={Machine Learning and the Physical Sciences Workshop NeurIPS},
+    abstract = {Incorporating the Hamiltonian structure of physical dynamics into deep learning models provides a powerful way to improve the interpretability and prediction accuracy. While previous works are mostly limited to the Euclidean spaces, their extension to the Lie group manifold is needed when rotations form a key component of the dynamics, such as the higher-order physics beyond simple point-mass dynamics for N-body celestial interactions. Moreover, the multiscale nature of these processes presents a challenge to existing methods as a long time horizon is required. By leveraging a symplectic Lie-group manifold preserving integrator, we present a method for data-driven discovery of non-Newtonian astronomy. Preliminary results show the importance of both these properties in training stability and prediction accuracy.},
+    year={2022},
+    arxiv = {2210.00090},
+    show_year = {true},
+    url={https://arxiv.org/abs/2210.00090}
+}
+
+@inproceedings{liu2022deep,
+    abbr={NeurIPS 2022},
+    title={Deep Generalized Schrodinger Bridge},
+    author={Liu, Guan-Horng and Chen*, Tianrong and So*, Oswin and Theodorou, Evangelos A},
+    booktitle={Thirty-Sixth Conference on Neural Information Processing Systems (NeurIPS)},
+    abstract = {Mean-Field Game (MFG) serves as a crucial mathematical framework in modeling the collective behavior of individual agents interacting stochastically with a large population. In this work, we aim at solving a challenging class of MFGs in which the differentiability of these interacting preferences may not be available to the solver, and the population is urged to converge exactly to some desired distribution. These setups are, despite being well-motivated for practical purposes, complicated enough to paralyze most (deep) numerical solvers. Nevertheless, we show that Schr\"odinger Bridge - as an entropy-regularized optimal transport model - can be generalized to accepting mean-field structures, hence solving these MFGs. This is achieved via the application of Forward-Backward Stochastic Differential Equations theory, which, intriguingly, leads to a computational framework with a similar structure to Temporal Difference learning. As such, it opens up novel algorithmic connections to Deep Reinforcement Learning that we leverage to facilitate practical training. We show that our proposed objective function provides necessary and sufficient conditions to the mean-field problem. Our method, named Deep Generalized Schr\"odinger Bridge (DeepGSB), not only outperforms prior methods in solving classical population navigation MFGs, but is also capable of solving 1000-dimensional opinion depolarization, setting a new state-of-the-art numerical solver for high-dimensional MFGs. Our code will be made available at https://github.com/ghliu/DeepGSB.},
+    arxiv = {2209.09893},
+    show_year = {true},
+    url={https://arxiv.org/abs/2209.09893},
+    year={2022}
+}
+
+@article{so2022multimodal,
+    author    = {Oswin So and Kyle Stachowicz and Evangelos A. Theodorou},
+    title     = {Multimodal Maximum Entropy Dynamic Games},
+    journal={arXiv preprint (in submission)},
+    year      = {2022},
+    abstract = {Environments with multi-agent interactions often result a rich set of modalities of behavior between agents due to the inherent suboptimality of decision making processes when agents settle for satisfactory decisions. However, existing algorithms for solving these dynamic games are strictly unimodal and fail to capture the intricate multimodal behaviors of the agents. In this paper, we propose MMELQGames (Multimodal Maximum-Entropy Linear Quadratic Games), a novel constrained multimodal maximum entropy formulation of the Differential Dynamic Programming algorithm for solving generalized Nash equilibria. By formulating the problem as a certain dynamic game with incomplete and asymmetric information where agents are uncertain about the cost and dynamics of the game itself, the proposed method is able to reason about multiple local generalized Nash equilibria, enforce constraints with the Augmented Lagrangian framework and also perform Bayesian inference on the latent mode from past observations. We assess the efficacy of the proposed algorithm on two illustrative examples: multi-agent collision avoidance and autonomous racing. In particular, we show that only MMELQGames is able to effectively block a rear vehicle when given a speed disadvantage and the rear vehicle can overtake from multiple positions.},
+    arxiv = {2201.12925},
+    video = {https://youtu.be/7molN_Q38dk}
+}
+
+@inproceedings{pereira2022decentralized,
+    abbr={RSS 2022},
+    author    = {Marcus A. Pereira and
+                Augustinos D. Saravanos and
+                Oswin So and
+               Evangelos A. Theodorou},
+    title     = {Decentralized Safe Multi-agent Stochastic Optimal Control using Deep FBSDEs and ADMM},
+    booktitle   = {Robotics: Science and Systems (RSS)},
+    year      = {2022},
+    abstract = {In this work, we propose a novel safe and scalable decentralized solution for multi-agent control in the presence of stochastic disturbances. Safety is mathematically encoded using stochastic control barrier functions and safe controls are computed by solving quadratic programs. Decentralization is achieved by augmenting to each agent’s optimization variables, copy variables, for its neighboring agents. This allows us to decouple the centralized multi-agent optimization problem. How- ever, to ensure safety, neighboring agents must agree on what is safe for both of us and this creates a need for consensus. To enable safe consensus solutions, we incorporate an ADMM- based approach. Specifically, we propose a Merged CADMM- OSQP implicit neural network layer, that solves a mini-batch of both, local quadratic programs as well as the overall con- sensus problem, as a single optimization problem. This layer is embedded within a Deep FBSDEs network architecture at every time step, to facilitate end-to-end differentiable, safe and decentralized stochastic optimal control. The efficacy of the proposed approach is demonstrated on several challenging multi- robot tasks in simulation. By imposing requirements on safety specified by collision avoidance constraints, the safe operation of all agents is ensured during the entire training process. We also demonstrate superior scalability in terms of computational and memory savings as compared to a centralized approach.},
+    arxiv = {2202.10658},
+    doi = {10.15607/RSS.2022.XVIII.055},
+    show_year = {true},
+    video = {https://youtu.be/xewGeuDcDho}
+}
+
+@inproceedings{so2021maximum,
+    abbr={ICRA 2022},
+    author    = {Oswin So and
+                 Ziyi Wang and
+                 Evangelos A. Theodorou},
+    title     = {Maximum Entropy Differential Dynamic Programming},
+    booktitle = {2022 International Conference on Robotics and Automation (ICRA)},
+    volume    = {abs/2110.06451},
+    year      = {2021},
+    abstract={In this paper, we present a novel maximum entropy formulation of the Differential Dynamic Programming algorithm and derive two variants using unimodal and multimodal value functions parameterizations. By combining the maximum entropy Bellman equations with a particular approximation of the cost function, we are able to obtain a new formulation of Differential Dynamic Programming which is able to escape from local minima via exploration with a multimodal policy. To demonstrate the efficacy of the proposed algorithm, we provide experimental results using four systems on tasks that are represented by cost functions with multiple local minima and compare them against vanilla Differential Dynamic Programming. Furthermore, we discuss connections with previous work on the linearly solvable stochastic control framework and its extensions in relation to compositionality.},
+    url       = {https://arxiv.org/abs/2110.06451},
+    doi={10.1109/ICRA46639.2022.9812228},
+    arxiv = {2110.06451},
+    show_year = {false},
+    video = {https://youtu.be/NHr9Kj_jnAI}
+}
+
+@inproceedings{wang2021variational,
+  abbr={RSS 2021},
+  title={Variational Inference MPC using Tsallis Divergence},
+  author={Wang*, Ziyi and So*, Oswin and Gibson, Jason and Vlahov, Bogdan and Gandhi, Manan S and Liu, Guan-Horng and Theodorou, Evangelos A},
+  booktitle={Robotics: Science and Systems (RSS)},
+  year={2021},
+  abstract={In this paper, we provide a generalized framework for Variational Inference-Stochastic Optimal Control by using thenon-extensive Tsallis divergence. By incorporating the deformed exponential function into the optimality likelihood function, a novel Tsallis Variational Inference-Model Predictive Control algorithm is derived, which includes prior works such as Variational Inference-Model Predictive Control, Model Predictive PathIntegral Control, Cross Entropy Method, and Stein VariationalInference Model Predictive Control as special cases. The proposed algorithm allows for effective control of the cost/reward transform and is characterized by superior performance in terms of mean and variance reduction of the associated cost. The aforementioned features are supported by a theoretical and numerical analysis on the level of risk sensitivity of the proposed algorithm as well as simulation experiments on 5 different robotic systems with 3 different policy parameterizations.},
+  show_year = {true},
+  arxiv={2104.00241},
+}
+
+
+@article{evans2021spatio,
+  title={Spatio-Temporal Differential Dynamic Programming for Control of Fields},
+  author={Evans, Ethan N and So, Oswin and Kendall, Andrew P and Liu, Guan-Horng and Theodorou, Evangelos A},
+  journal={arXiv preprint (in submission)},
+  year={2021},
+  abstract={We consider the optimal control problem of a general nonlinear spatio-temporal system described by Partial Differential Equations (PDEs). Theory and algorithms for control of spatio-temporal systems are of rising interest among the automatic control community and exhibit numerous challenging characteristic from a control standpoint. Recent methods focus on finite-dimensional optimization techniques of a discretized finite dimensional ODE approximation of the infinite dimensional PDE system. In this paper, we derive a differential dynamic programming (DDP) framework for distributed and boundary control of spatio-temporal systems in infinite dimensions that is shown to generalize both the spatio-temporal LQR solution, and modern finite dimensional DDP frameworks. We analyze the convergence behavior and provide a proof of global convergence for the resulting system of continuous-time forward-backward equations. We explore and develop numerical approaches to handle sensitivities that arise during implementation, and apply the resulting STDDP algorithm to a linear and nonlinear spatio-temporal PDE system. Our framework is derived in infinite dimensional Hilbert spaces, and represents a discretization-agnostic framework for control of nonlinear spatio-temporal PDE systems.},
+  show_year = {false},
+  arxiv={2104.04044},
+}
+
+@inproceedings{wang2021adaptive,
+  abbr={L4DC 2021},
+  author    = {Ziyi Wang and
+               Oswin So and
+               Keuntaek Lee and
+               Evangelos A. Theodorou},
+  editor    = {Ali Jadbabaie and
+               John Lygeros and
+               George J. Pappas and
+               Pablo A. Parrilo and
+               Benjamin Recht and
+               Claire J. Tomlin and
+               Melanie N. Zeilinger},
+  title     = {Adaptive Risk Sensitive Model Predictive Control with Stochastic Search},
+  booktitle = {Learning for Dynamics & Control Conference},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {144},
+  pages     = {510--522},
+  publisher = {{PMLR}},
+  year      = {2021},
+  abstract={We present a general framework for optimizing the Conditional Value-at-Risk for dynamical systems using stochastic search. The framework is capable of handling the uncertainty from the initial condition, stochastic dynamics, and uncertain parameters in the model. The algorithm is compared against a risk-sensitive distributional reinforcement learning framework and demonstrates outperformance on a pendulum and cartpole with stochastic dynamics. We also showcase the applicability of the framework to robotics as an adaptive risk-sensitive controller by optimizing with respect to the fully nonlinear belief provided by a particle filter on a pendulum, cartpole, and quadcopter in simulation.},
+  url       = {http://proceedings.mlr.press/v144/wang21b.html},
+  show_year = {true},
+  arxiv={2009.01090},
+}
