@@ -49,3 +49,16 @@ See my
     <a href="{{ site.resume_path | prepend: 'https://oswinso.github.io/assets/pdf/' }}" target="_blank">full CV</a>
 </b>
 here (updated in February 2026).
+
+<strong>Contact: </strong>
+      oswinso [at] mit [dot] edu
+<br>
+<strong>Follow: </strong>
+      <a href="https://scholar.google.com/citations?user=AwlxGQgAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+      <strong> | </strong>
+      <a href="https://www.linkedin.com/in/oswinso" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <strong> | </strong>
+      <a href="https://github.com/oswinso" target="_blank" title="GitHub"><i class="fab fa-github"></i> oswinso</a>
+      <strong> | </strong>
+      <a href="https://twitter.com/oswinso" target="_blank" title="GitHub"><i class="fab fa-twitter"></i> @oswinso</a>
+<br><br>
