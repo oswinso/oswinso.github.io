@@ -22,6 +22,7 @@ so2026discrete,
   year={2026},
   url={https://openreview.net/forum?id=VXB4xxAgOf},
   abstract={Computation methods for solving entropy-regularized reward optimization—a class of problems widely used for fine-tuning generative models—have advanced rapidly. Among those, Adjoint Matching (AM, Domingo-Enrich et al., 2025) has proven highly effective in continuous state spaces with differentiable rewards. Transferring these practical successes to discrete generative modeling, however, remains particularly challenging and largely unexplored, mainly due to the drastic shift in generative model classes to discrete state spaces, which are nowhere differentiable. In this work, we propose Discrete Adjoint Matching (DAM)—a discrete variant of AM for fine-tuning discrete generative models characterized by Continuous-Time Markov Chains, such as diffusion-based large language models. The core of DAM is the introduction of discrete adjoint—an estimator of the optimal solution to the original problem but formulated on discrete domains—from which standard matching frameworks can be applied. This is derived via a purely statistical standpoint, in contrast to the control-theoretic viewpoint in AM, thereby opening up new algorithmic opportunities for general adjoint-based estimators. We showcase DAM’s effectiveness on synthetic and mathematical reasoning tasks. },
+  pdf={https://oswinso.xyz/assets/publications/dam.pdf},
   selected={true},
   preview = {dam.png}
 }
@@ -35,6 +36,7 @@ so2026feasibility,
   year={2026},
   url={https://openreview.net/forum?id=5jjCUWg6VV},
   abstract={Recent advances in deep reinforcement learning (RL) have achieved strong results on high-dimensional control tasks, but applying RL to reachability problems raises a fundamental mismatch: reachability seeks to maximize the set of states from which a system remains safe indefinitely, while RL optimizes expected returns over a user-specified distribution. This mismatch can result in policies that perform poorly on low-probability states that are still within the safe set. A natural alternative is to frame the problem as a robust optimization over a set of initial conditions that specify the initial state, dynamics and safe set, but whether this problem has a solution depends on the feasibility of the specified set, which is unknown a priori. We propose Feasibility-Guided Exploration (FGE), a method that simultaneously identifies a subset of feasible initial conditions under which a safe policy exists, and learns a policy to solve the reachability problem over this set of initial conditions. Empirical results demonstrate that FGE learns policies with over 50% more coverage than the best existing method for challenging initial conditions across tasks in the MuJoCo simulator and the Kinetix simulator with pixel observations. },
+  pdf={https://oswinso.xyz/assets/publications/fge.pdf},
   selected={true},
   preview = {fge.jpg}
 }
