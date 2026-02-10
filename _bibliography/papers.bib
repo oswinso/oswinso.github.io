@@ -70,6 +70,7 @@ for the BC flow while keeping the support, to maximize the performance. Across
 ity and using a constant set of hyperparameters for all tasks, ReFORM dominates
 all baselines with hand-tuned hyperparameters on the performance profile curves.},
   arxiv = {2602.05051},
+  code = {https://github.com/MIT-REALM/reform},
   selected={true},
   preview = {reform.png}
 }
@@ -85,6 +86,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   website = {https://mit-realm.github.io/def-marl/},
   show_year = {true},
   url={https://arxiv.org/abs/2504.15425},
+  code = {https://github.com/MIT-REALM/def-marl/},
   award={Outstanding Student Paper Award, 0.6%},
   selected={true},
   preview = {defmarl.jpg}
@@ -93,13 +95,16 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
 @inproceedings{yin2025safe,
   abbr={RSS 2025},
   title={Safe Beyond the Horizon: Efficient Sampling-based MPC with Neural Control Barrier Functions},
-  author={Ji, Yin* and So, Oswin* and Yu, Eric and Fan, Chuchu and Tsiotras, Panagiotis},
+  author={Ji*, Yin and So*, Oswin and Yu, Eric and Fan, Chuchu and Tsiotras, Panagiotis},
   booktitle={Robotics: Science and Systems (RSS)},
   abstract = {A common problem when using model predictive control (MPC) in practice is the satisfaction of safety beyond the prediction horizon. While theoretical works have shown that safety can be guaranteed by enforcing a suitable terminal set constraint or a sufficiently long prediction horizon, these techniques are difficult to apply and thus rarely used by practitioners, especially in the case of general nonlinear dynamics. To solve this, we make a tradeoff between exact recursive feasibility, computational tractability, and applicability to black-box dynamics by learning an approximate discrete-time control barrier function and incorporating it into variational inference MPC (VIMPC), a sampling-based MPC paradigm. To handle the resulting state constraints, we further propose a new sampling strategy that greatly reduces the variance of the estimated optimal control, improving the sample efficiency and enabling real-time planning on CPU. The resulting Neural Shield-VIMPC (NS-VIMPC) controller yields substantial safety improvements compared to existing sampling-based MPC controllers, even under badly designed cost functions. We validate our approach in both simulation and real-world hardware experiments.},
   year = {2025},
   arxiv = {2502.15006},
   show_year = {true},
-  url={https://arxiv.org/abs/2502.15006}
+  url={https://arxiv.org/abs/2502.15006},
+  website = {https://mit-realm.github.io/ns-vimpc},
+  selected={true},
+  preview = {ns-vimpc.jpg},
 }
 
 @article{so2025comment,
@@ -127,6 +132,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   website={https://mit-realm.github.io/dgppo/},
   abstract={Control policies that can achieve high task performance and satisfy safety contraints are desirable for any system, including multi-agent systems (MAS). One promising technique for ensuring the safety of MAS is distributed control barrier functions (CBF). However, it is difficult to design distributed CBF-based policies for MAS that can tackle unknown discrete-time dynamics, partial observability, changing neighborhoods, and input constraints, especially when a distributed high-performance nominal policy that can achieve the task is unavailable. To tackle these challenges, we propose DGPPO, a new framework that simultaneously learns both a discrete graph CBF which handles neighborhood changes and input constraints, and a distributed high-performance safe policy for MAS with unknown discrete-time dynamics. We empirically validate our claims on a suite of multi-agent tasks spanning three different simulation engines. The results suggest that, compared with existing methods, our DGPPO framework obtains policies that achieve high task performance (matching baselines that ignore the safety constraints), and high safety rates (matching the most conservative baselines), with a constant set of hyperparameters across all environments.},
   pdf={https://openreview.net/pdf?id=1X1R7P6yzt},
+  code = {https://github.com/MIT-REALM/dgppo/},
   selected = {true},
   preview = {dgppo.jpg}
 }
@@ -141,6 +147,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   website={https://mit-realm.github.io/gcbfplus-website},
   abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
   arxiv = {2401.14554},
+  code = {https://github.com/MIT-REALM/gcbfplus/},
   selected={true},
   preview = {gcbf+.jpeg}
 }
@@ -152,6 +159,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   year      = {2025},
   publisher={IEEE},
   website={https://oswinso.xyz/rpcbf},
+  code={https://github.com/LuziaKn/rpcbf-safety-on-the-fly/tree/main},
   pdf={https://autonomousrobots.nl/assets/files/publications/25-knoedler-ral.pdf}
 }
 
@@ -193,6 +201,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
     arxiv = {2310.15478},
     website = {https://mit-realm.github.io/pncbf},
     url={https://arxiv.org/abs/2310.15478},
+    code = {https://github.com/mit-realm/pncbf},
     selected={true},
     preview = {pncbf.gif}
 }
@@ -208,6 +217,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   website = {https://mit-realm.github.io/efppo},
   show_year = {true},
   url={https://arxiv.org/abs/2305.14154},
+  code = {https://github.com/mit-realm/efppo},
   selected={true},
   preview = {efppo.gif}
 }
