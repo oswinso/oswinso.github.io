@@ -25,7 +25,7 @@ latest_posts:
 
 I am interested in developing structure-exploiting algorithms for the learning and control of dynamical systems.
 My research has mainly focused on improving **safety in reinforcement learning using Hamilton-Jacobi reachability analysis and Control Barrier Functions**, with applications to multi-agent systems and fixed wing aircraft.
-I have also dabbled in topics such as **scientific reasoning in (d)LLMs**.
+I have also dabbled in topics such as **reasoning in (d)LLMs**.
 
 <!-- I'm Oswin So, a 4th year PhD student in <a href="https://aeroastro.mit.edu/realm">REALM</a> at MIT, -->
 
