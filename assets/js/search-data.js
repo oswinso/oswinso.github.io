@@ -34,7 +34,13 @@ ninja.data = [{
             window.location.href = "/blog/2022/quotient-of-gaussian-densities/";
           
         },
-      },{id: "teachings-data-science-fundamentals",
+      },{id: "news-three-new-papers-were-accepted-to-iclr2026-discrete-adjoint-matching-extending-adjoint-matching-to-discrete-state-spaces-reform-reflected-flows-for-on-support-offline-rl-via-noise-manipulation-improving-offline-rl-using-support-constraints-instead-of-regularizing-statistical-divergence-solving-parameter-robust-avoid-problems-with-unknown-feasibility-using-reinforcement-learning-a-step-towards-solving-for-safe-policies-that-are-robust-to-parameter-sets-that-may-include-infeasible-parameters-i-am-unable-to-travel-to-rio-de-janeiro-to-present-these-works-in-person-but-my-co-authors-will-be-there-to-present-these-works",
+          title: 'Three new papers were accepted to ICLR2026! Discrete Adjoint Matching: Extending adjoint matching...',
+          description: "",
+          section: "News",},{id: "news-i-am-looking-for-internship-positions-for-summer-2026-if-you-have-an-opening-for-a-research-intern-feel-free-to-reach-out-to-me-via-email",
+          title: 'I am looking for internship positions for summer 2026! If you have an...',
+          description: "",
+          section: "News",},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
           section: "Teachings",handler: () => {
