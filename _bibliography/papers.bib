@@ -9,6 +9,7 @@ sharpless2026bellman,
   booktitle={Submission},
   abstract={Real-world tasks involve nuanced combinations of goal and safety specifications, which often directly compete. In high dimensions, the challenge is exacerbated: formal automata become cumbersome, and the combination of sparse rewards tends to require laborious tuning. In this work, we consider the structure of the Bellman Value as a means to naturally organize the problem for improved automatic performance without introducing additional abstractions. Namely, we prove the Bellman Value for a complex task defined in temporal logic can be decomposed into a graph of Bellman Values, where the graph is connected by a set of well-studied Bellman equations (BEs): the Reach-Avoid BE, the Avoid BE, and a novel type, the Reach-Avoid-Loop BE. From this perspective, we design a specialized PPO variant, Value-Decomposition PPO (VDPPO) that uses a single learned representation by embedding the decomposed Value graph. We conduct a variety of simulated and real multi-objective experiments, including delivery and herding, to test our method on diverse high-dimensional systems involving heterogeneous teams and complex agents. Ultimately, we find this approach greatly improves performance over existing baselines, balancing safety and liveness automatically. },
   pdf={https://oswinso.xyz/assets/publications/vdppo.pdf},
+  arxiv={2602.19532},
   selected={true},
   preview = {vdppo.png}
 }
@@ -73,6 +74,24 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   code = {https://github.com/MIT-REALM/reform},
   selected={true},
   preview = {reform.png}
+}
+
+@article{wang2025learning,
+  abbr={Nat. Commun.},
+  title={Learning plasma dynamics and robust rampdown trajectories with predict-first experiments at TCV},
+  author={Wang, Allen M and Pau, Alessandro and Rea, Cristina and So, Oswin and Dawson, Charles and Sauter, Olivier and Boyer, Mark D and Vu, Anna and Galperti, Cristian and Fan, Chuchu and others},
+  journal={Nature Communications},
+  volume={16},
+  number={1},
+  pages={8877},
+  year={2025},
+  news={https://news.mit.edu/2025/new-prediction-model-could-improve-reliability-fusion-power-plants-1007},
+  publisher={Nature Publishing Group UK London},
+  abstract={The rampdown phase of a tokamak pulse is difficult to simulate and often exacerbates multiple plasma instabilities. To reduce the risk of disrupting operations, we leverage advances in Scientific Machine Learning (SciML) to combine physics with data-driven models, developing a neural state-space model (NSSM) that predicts plasma dynamics during Tokamak à Configuration Variable (TCV) rampdowns. The NSSM efficiently learns dynamics from a modest dataset of 311 pulses with only five pulses in a reactor-relevant high-performance regime. The NSSM is parallelized across uncertainties, and reinforcement learning (RL) is applied to design trajectories that avoid instability limits. High-performance experiments at TCV show statistically significant improvements in relevant metrics. A predict-first experiment, increasing plasma current by 20% from baseline, demonstrates the NSSM’s ability to make small extrapolations. The developed approach paves the way for designing tokamak controls with robustness to considerable uncertainty and demonstrates the relevance of SciML for fusion experiments.},
+  url={https://www.nature.com/articles/s41467-025-63917-x},
+  arxiv={2502.12327},
+  selected={true},
+  preview = {rampdown_teaser.png}
 }
 
 @inproceedings{zhang2025solving,
@@ -148,6 +167,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
   arxiv = {2401.14554},
   code = {https://github.com/MIT-REALM/gcbfplus/},
+  news = {https://news.mit.edu/2025/mit-engineers-help-multirobot-systems-stay-safety-zone-0131},
   selected={true},
   preview = {gcbf+.jpeg}
 }
@@ -218,6 +238,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   show_year = {true},
   url={https://arxiv.org/abs/2305.14154},
   code = {https://github.com/mit-realm/efppo},
+  news = {https://news.mit.edu/2023/safe-and-reliable-autopilots-flying-0612},
   selected={true},
   preview = {efppo.gif}
 }
