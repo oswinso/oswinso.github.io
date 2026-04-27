@@ -46,6 +46,11 @@ $color-periodical: #4c4c4c !default;
         display: inline-block;
       }
 
+      .publication-preview-lightbox {
+        display: inline-block;
+        cursor: zoom-in;
+      }
+
       .abbr {
         margin-bottom: 0.5rem;
 
