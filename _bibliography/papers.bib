@@ -2,14 +2,43 @@
 ---
 
 @inproceedings{
-sharpless2026bellman,
+  so2026,
   abbr={In Submission},
-  title={Bellman Value Decomposition for Task Logic in Safe Optimal Control},
-  author={Sharpless*, William and So*, Oswin and Hirsch, Dylan and Herbert, Sylvia and Fan, Chuchu},
+  title={Value Functions for Temporal Logic: Optimal Policies and Safety Filters},
+  author={So*, Oswin and Sharpless*, William and Herbert, Sylvia and Fan, Chuchu},
   booktitle={Submission},
-  abstract={Real-world tasks involve nuanced combinations of goal and safety specifications, which often directly compete. In high dimensions, the challenge is exacerbated: formal automata become cumbersome, and the combination of sparse rewards tends to require laborious tuning. In this work, we consider the structure of the Bellman Value as a means to naturally organize the problem for improved automatic performance without introducing additional abstractions. Namely, we prove the Bellman Value for a complex task defined in temporal logic can be decomposed into a graph of Bellman Values, where the graph is connected by a set of well-studied Bellman equations (BEs): the Reach-Avoid BE, the Avoid BE, and a novel type, the Reach-Avoid-Loop BE. From this perspective, we design a specialized PPO variant, Value-Decomposition PPO (VDPPO) that uses a single learned representation by embedding the decomposed Value graph. We conduct a variety of simulated and real multi-objective experiments, including delivery and herding, to test our method on diverse high-dimensional systems involving heterogeneous teams and complex agents. Ultimately, we find this approach greatly improves performance over existing baselines, balancing safety and liveness automatically. },
+  abstract={While Bellman equations for basic reach, avoid,
+and reach-avoid problems are well studied, the relationship
+between value optimality and policy optimality becomes subtle
+in the undiscounted infinite-horizon setting, particularly for
+more complicated tasks. Greedily maximizing the Q-function
+can produce policies that indefinitely defer task completion
+for reach-avoid problems, or equivalently, Until specifications,
+even when the value function is optimal. Building upon recent
+results decomposing the value function for temporal logic
+(TL) into a graph of constituent value functions, we construct
+non-Markovian policies based on state history that avoid
+this pathology and prove their optimality with respect to
+the quantitative robustness score for nested Until, Globally,
+and Globally-Until specifications. We further show how the Q
+function can serve as a safety filter for complex TL specifications,
+extending prior results beyond simple avoid or reach-avoid tasks.},
+  year={2026},
   pdf={https://oswinso.xyz/assets/publications/vdppo.pdf},
   arxiv={2602.19532},
+  selected={true},
+  preview = {vd_proof.jpg}
+}
+
+@inproceedings{
+  sharpless2026bellman,
+  abbr={RSS 2026},
+  title={Bellman Value Decomposition for Task Logic in Safe Optimal Control},
+  author={Sharpless*, William and So*, Oswin and Hirsch, Dylan and Herbert, Sylvia and Fan, Chuchu},
+  booktitle={Robotics: Science and Systems (RSS)},
+  abstract={Real-world tasks involve nuanced combinations of goal and safety specifications, which often directly compete. In high dimensions, the challenge is exacerbated: formal automata become cumbersome, and the combination of sparse rewards tends to require laborious tuning. In this work, we consider the structure of the Bellman Value as a means to naturally organize the problem for improved automatic performance without introducing additional abstractions. Namely, we prove the Bellman Value for a complex task defined in temporal logic can be decomposed into a graph of Bellman Values, where the graph is connected by a set of well-studied Bellman equations (BEs): the Reach-Avoid BE, the Avoid BE, and a novel type, the Reach-Avoid-Loop BE. From this perspective, we design a specialized PPO variant, Value-Decomposition PPO (VDPPO) that uses a single learned representation by embedding the decomposed Value graph. We conduct a variety of simulated and real multi-objective experiments, including delivery and herding, to test our method on diverse high-dimensional systems involving heterogeneous teams and complex agents. Ultimately, we find this approach greatly improves performance over existing baselines, balancing safety and liveness automatically. },
+  year={2026},
+  arxiv={},
   selected={true},
   preview = {vdppo.png}
 }
