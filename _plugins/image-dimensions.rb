@@ -30,7 +30,7 @@ module Jekyll
       absolute_path = File.expand_path(relative_path, site.source)
       return unless File.file?(absolute_path)
 
-      output, error, status = Open3.capture3('identify', '-format', '%w %h', absolute_path)
+      output, error, status = Open3.capture3('identify', '-format', '%w %h', "#{absolute_path}[0]")
       unless status.success?
         Jekyll.logger.warn 'ImageDimensions:', "identify failed for #{path}: #{error.strip}"
         return
