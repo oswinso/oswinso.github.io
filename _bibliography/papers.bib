@@ -2,7 +2,20 @@
 ---
 
 @inproceedings{
-  so2026,
+  zhang2026,
+  abbr={In Submission},
+  title={LASER: Latent Space Adjoint Matching for Support Constrained Entropy Regularized Offline RL},
+  author={Zhang, Songyuan and So, Oswin and Yu, Eric Yang and Cleaveland, Matthew and Crowley-Dolen, Peter and Fan, Chuchu},
+  booktitle={Submission},
+  abstract={While offline reinforcement learning (RL) enables policy optimization from static datasets without costly online interaction, it remains bottlenecked by the risk of executing out-of-distribution (OOD) actions. Recent generative-model-based approaches mitigate this by performing RL within a constrained latent space, but they often sacrifice policy expressiveness or suffer from vanishing gradients. In this work, we identify that entropy regularization is essential to prevent mode collapse in latent-space RL, though applying it without introducing numerical instability or compromising expressiveness remains a significant open challenge. We introduce LASER, a novel offline RL algorithm that applies latent-space adjoint matching to achieve entropy-regularized RL with expressive flow policies. By design, our approach satisfies dataset support constraints and prevents mode collapse. Through comprehensive experiments on 40 challenging OGBench tasks with varying dataset qualities, we show that LASER achieves state-of-the-art performance. Notably, LASER uses a single, constant set of hyperparameters to outperform baselines even with their hand-tuned hyperparameters, highlighting its robust applicability.},
+  year={2026},
+  pdf={https://oswinso.xyz/assets/publications/laser.pdf},
+  selected={true},
+  preview = {}
+}
+
+@inproceedings{
+  so2026value,
   abbr={In Submission},
   title={Value Functions for Temporal Logic: Optimal Policies and Safety Filters},
   author={So*, Oswin and Sharpless*, William and Herbert, Sylvia and Fan, Chuchu},
@@ -24,10 +37,23 @@ and Globally-Until specifications. We further show how the Q
 function can serve as a safety filter for complex TL specifications,
 extending prior results beyond simple avoid or reach-avoid tasks.},
   year={2026},
-  pdf={https://oswinso.xyz/assets/publications/vdppo.pdf},
+  pdf={https://oswinso.xyz/assets/publications/vd_proof.pdf},
   arxiv={2602.19532},
   selected={true},
   preview = {vd_proof.jpg}
+}
+
+@inproceedings{
+  saravanos2026deep,
+  abbr={ICML 2026},
+  title={Learning-to-Optimize via Deep Unfolded Flows},
+  author={Saravanos, Augustinos and So, Oswin and Ahmad, H. M. Sabbir and Fan, Chuchu},
+  booktitle={International Conference on Machine Learning (ICML)},
+  abstract={We introduce FlowOptimizer, a deep unfolded, flow-based framework for learned iterative optimization. Motivated by the expressiveness of flow models, we represent each optimization iteration via a velocity field that operates on a population of candidate solutions, i.e., a set of parallel iterates, conditioned on contextual information including their objective values and gradients, as well as population-level statistics. The velocity field is initially trained in a simulation-free manner by matching displacements from source populations to improved target ones obtained through sampling the objective. Subsequently, we unfold this velocity field as the internal iteration of an optimization sequence, and fine-tune it in an end-to-end manner by directly optimizing objective values over a targeted class of problems. Notably, FlowOptimizer is a self-supervised framework whose training relies solely on objective evaluations without requiring knowledge of solutions. We evaluate our approach on a series of tasks from standard non-convex optimization benchmarks to real-world problems from supply chain, robotics and power grid applications. FlowOptimizer consistently outperforms well-established sampling-based/gradient-based traditional optimization and learning-to-optimize methods, often by orders of magnitude in terms of solution quality. We further highlight its ability to be trained on low-dimensional problems and successfully generalize to substantially higher-dimensional (x10) ones.},
+  year={2026},
+  selected={true},
+  preview = {},
+  award={Spotlight, top 2%},
 }
 
 @inproceedings{
