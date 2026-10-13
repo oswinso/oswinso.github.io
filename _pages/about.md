@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: >
-  4th year PhD @ <a href="https://aeroastro.mit.edu/realm">REALM</a>, MIT AeroAstro
+  5th year PhD @ <a href="https://aeroastro.mit.edu/realm">REALM</a>, MIT AeroAstro
 
 profile:
   align: right
@@ -38,7 +38,8 @@ undergraduate research with
 and
 <a href="https://mtao8.math.gatech.edu" target="_blank">Molei Tao</a>.
 
-The past summer, I interned at META FAIR working on fine-tuning discrete generative models characterized by Continuous-Time Markov Chains (e.g., diffusion-based LLMs), where I was mentored by <a href="https://ghliu.github.io" target="_blank">Guan-Horng Liu</a> and worked with <a href="https://rtqichen.github.io">Ricky T. Q. Chen</a>.
+The past summer, I interned at Waymo working on learning reward models for fine-tuning VLAs in the context of autonomous driving, where I was mentored by <a href="https://khaledrefaat.com" target="_blank">Khaled Refaat</a>.
+Before that, I interned at META FAIR working on fine-tuning discrete generative models characterized by Continuous-Time Markov Chains (e.g., diffusion-based LLMs), where I was mentored by <a href="https://ghliu.github.io" target="_blank">Guan-Horng Liu</a> and worked with <a href="https://rtqichen.github.io">Ricky T. Q. Chen</a>.
 I've previously interned at Toyota Research Institute, where I worked on game theoretic planning.
 I also worked at Aurora as a Behavior Planning Intern during the summer of 2021 under
 <a href="https://scholar.google.com/citations?user=daYjNkAAAAAJ&hl=en" target="_blank">Paul Vernaza</a>
@@ -50,7 +51,7 @@ See my
 <b>
     <a href="{{ site.resume_path | prepend: 'https://oswinso.github.io/assets/pdf/' }}" target="_blank">full CV</a>
 </b>
-here (updated in February 2026).
+here (updated in October 2026).
 
 <strong>Contact: </strong>
       oswinso [at] mit [dot] edu

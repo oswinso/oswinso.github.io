@@ -2,24 +2,62 @@
 ---
 
 @inproceedings{
-  zhang2026,
+  so2026leapcbf,
   abbr={In Submission},
+  title={LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials},
+  author={So*, Oswin and Yu*, Eric Yang and Fan, Chuchu},
+  booktitle={Submission},
+  year={2026},
+}
+
+@inproceedings{
+  yu2026wish,
+  abbr={In Submission},
+  title={WISH: Margin-Free Latent Control Barrier Functions via World-Model Imagination},
+  author={Yu*, Eric Yang and So*, Oswin and Saravanos, Augustinos and Cleaveland, Matthew and Fan, Chuchu},
+  booktitle={Submission},
+  year={2026},
+}
+
+@inproceedings{
+  ahmad2026flowskill,
+  abbr={In Submission},
+  title={Flow-Skill: Learning Skill based Hierarchical Policies via Flow Models for Offline Goal Conditioned Reinforcement Learning},
+  author={Ahmad, H. M. Sabbir and Zhang, Songyuan and So, Oswin and Saravanos, Augustinos and Fan, Chuchu and Li, Wenchao},
+  booktitle={Submission},
+  year={2026},
+}
+
+@inproceedings{
+  zhang2026laser,
+  abbr={NeurIPS 2026},
   title={LASER: Latent Space Adjoint Matching for Support Constrained Entropy Regularized Offline RL},
   author={Zhang, Songyuan and So, Oswin and Yu, Eric Yang and Cleaveland, Matthew and Crowley-Dolen, Peter and Fan, Chuchu},
-  booktitle={Submission},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
   abstract={While offline reinforcement learning (RL) enables policy optimization from static datasets without costly online interaction, it remains bottlenecked by the risk of executing out-of-distribution (OOD) actions. Recent generative-model-based approaches mitigate this by performing RL within a constrained latent space, but they often sacrifice policy expressiveness or suffer from vanishing gradients. In this work, we identify that entropy regularization is essential to prevent mode collapse in latent-space RL, though applying it without introducing numerical instability or compromising expressiveness remains a significant open challenge. We introduce LASER, a novel offline RL algorithm that applies latent-space adjoint matching to achieve entropy-regularized RL with expressive flow policies. By design, our approach satisfies dataset support constraints and prevents mode collapse. Through comprehensive experiments on 40 challenging OGBench tasks with varying dataset qualities, we show that LASER achieves state-of-the-art performance. Notably, LASER uses a single, constant set of hyperparameters to outperform baselines even with their hand-tuned hyperparameters, highlighting its robust applicability.},
   year={2026},
   pdf={https://oswinso.xyz/assets/publications/laser.pdf},
+  arxiv={2610.08989},
+  website={https://mit-realm.github.io/laser/},
   selected={true},
   preview = {}
 }
 
 @inproceedings{
+  rountree2026causal,
+  abbr={NeurIPS 2026},
+  title={Causal Concept Explanations for Deep Neural Models},
+  author={Rountree, Jacob and Verma, Pulkit and So, Oswin and Fan, Chuchu and Shah, Julie},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2026},
+}
+
+@inproceedings{
   so2026value,
-  abbr={In Submission},
+  abbr={CDC 2026},
   title={Value Functions for Temporal Logic: Optimal Policies and Safety Filters},
   author={So*, Oswin and Sharpless*, William and Herbert, Sylvia and Fan, Chuchu},
-  booktitle={Submission},
+  booktitle={IEEE Conference on Decision and Control (CDC)},
   abstract={While Bellman equations for basic reach, avoid,
 and reach-avoid problems are well studied, the relationship
 between value optimality and policy optimality becomes subtle
@@ -38,7 +76,6 @@ function can serve as a safety filter for complex TL specifications,
 extending prior results beyond simple avoid or reach-avoid tasks.},
   year={2026},
   pdf={https://oswinso.xyz/assets/publications/vd_proof.pdf},
-  arxiv={2602.19532},
   selected={true},
   preview = {vd_proof.jpg}
 }
@@ -64,7 +101,7 @@ extending prior results beyond simple avoid or reach-avoid tasks.},
   booktitle={Robotics: Science and Systems (RSS)},
   abstract={Real-world tasks involve nuanced combinations of goal and safety specifications, which often directly compete. In high dimensions, the challenge is exacerbated: formal automata become cumbersome, and the combination of sparse rewards tends to require laborious tuning. In this work, we consider the structure of the Bellman Value as a means to naturally organize the problem for improved automatic performance without introducing additional abstractions. Namely, we prove the Bellman Value for a complex task defined in temporal logic can be decomposed into a graph of Bellman Values, where the graph is connected by a set of well-studied Bellman equations (BEs): the Reach-Avoid BE, the Avoid BE, and a novel type, the Reach-Avoid-Loop BE. From this perspective, we design a specialized PPO variant, Value-Decomposition PPO (VDPPO) that uses a single learned representation by embedding the decomposed Value graph. We conduct a variety of simulated and real multi-objective experiments, including delivery and herding, to test our method on diverse high-dimensional systems involving heterogeneous teams and complex agents. Ultimately, we find this approach greatly improves performance over existing baselines, balancing safety and liveness automatically. },
   year={2026},
-  arxiv={},
+  arxiv={2602.19532},
   selected={true},
   preview = {vdppo.png}
 }
@@ -131,6 +168,30 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   preview = {reform.png}
 }
 
+@article{choi2026safe,
+  abbr={RA-L},
+  title={Safe and Scalable Multi-Drone Payload Transport via CBF-based Reinforcement Learning with Zero-Shot Sim-to-Real Transfer},
+  author={Choi, Jeonghyun and So, Oswin and Zhang, Songyuan and Taylor, Charles and Fan, Chuchu},
+  journal={IEEE Robotics and Automation Letters (RA-L)},
+  abstract={Multi-drone payload transportation has emerged as a promising research paradigm with potential applications in construction, logistics, and disaster response. However, the complex coupled dynamics among drones, cables, and payloads pose significant challenges, and existing approaches remain limited in safety and scalability, particularly in dynamic and unstructured environments. In this work, we propose a learning-based framework for safe and scalable multi-drone cooperative payload transport. We introduce a minimal 2D abstraction that preserves the task-relevant drone-payload coupling required for coordination and safety, while remaining computationally efficient for large-scale learning. Using domain randomization over team size and physical parameters, we train a fully distributed policy via Discrete Graph Control Barrier Function Proximal Policy Optimization (DGPPO), enabling robust zero-shot sim-to-real transfer without fine-tuning. Extensive real-world evaluations demonstrate that a single learned policy generalizes across varying team sizes and task scenarios. Furthermore, multi-group hardware experiments show that the same policy can safely operate in dynamic environments, where other drone teams act as moving obstacles. These results indicate that the proposed framework enables efficient, safe, and scalable multi-drone payload transportation with strong generalization to complex real-world conditions.},
+  year={2026},
+  publisher={IEEE},
+  arxiv={2607.20665},
+}
+
+@article{aoyama2026second,
+  abbr={IJRR},
+  title={Second-Order Constrained Dynamic Optimization},
+  author={Aoyama, Yuichiro and So, Oswin and Saravanos, Augustinos D. and Theodorou, Evangelos A.},
+  journal={The International Journal of Robotics Research (IJRR)},
+  abstract={This paper provides an overview, analysis, and comparison of second-order dynamic optimization algorithms, i.e., constrained Differential Dynamic Programming (DDP) and Sequential Quadratic Programming (SQP). Although a variety of these algorithms have been proposed and used successfully, there exists a gap in understanding the key differences and advantages, which we aim to provide in this work. For constrained DDP, we choose methods that incorporate nonlinear programming techniques to handle state and control constraints, including Augmented Lagrangian (AL), Interior Point, Primal-Dual Augmented Lagrangian (PDAL), and Alternating Direction Method of Multipliers (ADMM). Both DDP and SQP are provided in single- and multiple-shooting formulations, where constraints that arise from dynamics are encoded implicitly and explicitly, respectively. As a byproduct of the review, we propose a single-shooting PDAL DDP that has more favorable properties than the standard AL variant, such as the robustness to the growth of penalty parameters. We perform extensive numerical experiments on a variety of systems with increasing complexity to investigate the quality of the solutions, the levels of constraint violation, and the sensitivity of final solutions with respect to initialization, as well as targets. The results show that single-shooting PDAL DDP and multiple-shooting SQP are the most robust methods. For multiple-shooting formulation, both DDP and SQP can enjoy informed initial guesses, while the latter appears to be more advantageous in complex systems. It is also worth highlighting that DDP provides favorable computational complexity and feedback gains as a byproduct of optimization as is.},
+  year={2026},
+  publisher={SAGE},
+  doi={10.1177/02783649251415417},
+  html={https://journals.sagepub.com/doi/abs/10.1177/02783649251415417},
+  arxiv={2409.11649},
+}
+
 @article{wang2025learning,
   abbr={Nat. Commun.},
   title={Learning plasma dynamics and robust rampdown trajectories with predict-first experiments at TCV},
@@ -147,6 +208,19 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   arxiv={2502.12327},
   selected={true},
   preview = {rampdown_teaser.png}
+}
+
+@article{wang2025active,
+  abbr={Commun. Phys.},
+  title={Active ramp-down control and trajectory design for tokamaks with neural differential equations and reinforcement learning},
+  author={Wang, Allen M and Rea, Cristina and So, Oswin and Dawson, Charles and Garnier, Darren T and Fan, Chuchu},
+  journal={Communications Physics},
+  abstract={The tokamak offers a promising path to fusion energy, but disruptions pose a major economic risk, motivating solutions to manage their consequence. This work develops a reinforcement learning approach to this problem by training a policy to ramp-down the plasma current while avoiding limits on a number of quantities correlated with disruptions. The policy training environment is a hybrid physics and machine learning model trained on simulations of the SPARC primary reference discharge (PRD) ramp-down, an upcoming burning plasma scenario which we use as a testbed. To address physics uncertainty and model inaccuracies, the simulation is massively parallelized on GPU with randomized physics parameters during policy training. The trained policy is then run in feedback on a transport simulator as a demonstration. We also directly address the crucial issue of control validation by demonstrating that a constraint-conditioned policy can be a trajectory design assistant that designs a library of feed-forward trajectories to handle different physics conditions and user constraint settings, a promising approach for the sensitive context of burning plasma tokamaks. Finally, we demonstrate that the training environment can be a useful platform for feed-forward optimization approaches by optimizing feed-forward trajectories that are robust to physics uncertainty.},
+  year={2025},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s42005-025-02146-6},
+  html={https://www.nature.com/articles/s42005-025-02146-6},
+  arxiv={2402.09387},
 }
 
 @inproceedings{zhang2025solving,
@@ -217,7 +291,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
   author={Zhang*, Songyuan and So*, Oswin and Garg, Kunal and Fan, Chuchu},
   journal={IEEE Transactions on Robotics (T-RO)},
   publisher={IEEE},
-  year={2024},
+  year={2025},
   website={https://mit-realm.github.io/gcbfplus-website},
   abstract={Distributed, scalable, and safe control of large-scale multi-agent systems (MAS) is a challenging problem. In this paper, we design a distributed framework for safe multi-agent control in large-scale environments with obstacles, where a large number of agents are required to maintain safety using only local information and reach their goal locations. We introduce a new class of certificates, termed graph control barrier function (GCBF), which are based on the well-established control barrier function (CBF) theory for safety guarantees and utilize a graph structure for scalable and generalizable distributed control of MAS. We develop a novel theoretical framework to prove the safety of an arbitrary-sized MAS with a single GCBF. We propose a new training framework GCBF+ that uses graph neural networks (GNNs) to parameterize a candidate GCBF and a distributed control policy. The proposed framework is distributed and is capable of directly taking point clouds from LiDAR, instead of actual state information, for real-world robotic applications. We illustrate the efficacy of the proposed method through various hardware experiments on a swarm of drones with objectives ranging from exchanging positions to docking on a moving target without collision. Additionally, we perform extensive numerical experiments, where the number and density of agents, as well as the number of obstacles, increase. Empirical results show that in complex environments with nonlinear agents (e.g., Crazyflie drones) GCBF+ outperforms the handcrafted CBF-based method with the best performance by up to 20% for relatively small-scale MAS for up to 256 agents, and leading reinforcement learning (RL) methods by up to 40% for MAS with 1024 agents. Furthermore, the proposed method does not compromise on the performance, in terms of goal reaching, for achieving high safety rates, which is a common trade-off in RL-based methods.},
   arxiv = {2401.14554},
@@ -228,6 +302,7 @@ all baselines with hand-tuned hyperparameters on the performance profile curves.
 }
 
 @article{knoedler2025safety,
+  abbr={RA-L},
   title     = {Safety on the Fly: Constructing Robust Safety Filters via Policy Control Barrier Functions at Runtime},
   author    = {Knoedler*, Luzia and So*, Oswin and Yin, Ji and Black, Mitchell and Serlin, Zachary and Tsiotras, Panagiotis and Alonso-Mora, Javier and Fan, Chuchu},
   journal   = {IEEE Robotics and Automation Letters (RAL)},
