@@ -14,6 +14,13 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
+  {% if page.career_banner %}
+    <section class="career-banner" aria-labelledby="career-banner-title">
+      <h2 id="career-banner-title">{{ page.career_banner.title | escape }}</h2>
+      {{ page.career_banner.text | markdownify }}
+    </section>
+  {% endif %}
+
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -64,14 +71,16 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    {% comment %} <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
+    {% comment %}
+      <!-- Social -->
+      {% if page.social %}
+        <div class="social">
+          <div class="contact-icons">{% social_links %}</div>
 
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %} {% endcomment %}
+          <div class="contact-note">{{ site.contact_note }}</div>
+        </div>
+      {% endif %}
+    {% endcomment %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

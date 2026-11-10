@@ -119,7 +119,7 @@
           {% endfor %}
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.resume_path | prepend: 'https://oswinso.github.io/assets/pdf/' }}" target="\_blank">CV</a>
+            <a class="nav-link" href="{{ site.resume_path | prepend: '/assets/pdf/' | relative_url }}" target="_blank">CV</a>
           </li>
 
           {% if site.search_enabled %}

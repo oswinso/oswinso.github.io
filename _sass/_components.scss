@@ -53,6 +53,34 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Career banner
+
+.career-banner {
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0.25rem;
+  background-color: var(--global-code-bg-color);
+  background-color: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color));
+  color: var(--global-text-color);
+
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
 // Profile
 
 .profile {

@@ -5,6 +5,12 @@ permalink: /
 subtitle: >
   5th year PhD @ <a href="https://aeroastro.mit.edu/realm">REALM</a>, MIT AeroAstro
 
+career_banner:
+  title: Seeking full-time opportunities
+  text: >
+    I expect to graduate in summer 2027 and am currently looking for full-time positions.
+    <br>Get in touch at oswinso [at] mit [dot] edu.
+
 profile:
   align: right
   image: profile.jpeg
@@ -49,19 +55,19 @@ working on cost function learning via on-policy negative examples for autonomous
 
 See my
 <b>
-    <a href="{{ site.resume_path | prepend: 'https://oswinso.github.io/assets/pdf/' }}" target="_blank">full CV</a>
+<a href="{{ site.resume_path | prepend: '/assets/pdf/' | relative_url }}" target="_blank">full CV</a>
 </b>
-here (updated in October 2026).
+here (updated in November 2026).
 
 <strong>Contact: </strong>
-      oswinso [at] mit [dot] edu
+oswinso [at] mit [dot] edu
 <br>
 <strong>Follow: </strong>
-      <a href="https://scholar.google.com/citations?user=AwlxGQgAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i> Google Scholar</a>
-      <strong> | </strong>
-      <a href="https://www.linkedin.com/in/oswinso" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <strong> | </strong>
-      <a href="https://github.com/oswinso" target="_blank" title="GitHub"><i class="fab fa-github"></i> oswinso</a>
-      <strong> | </strong>
-      <a href="https://twitter.com/oswinso" target="_blank" title="GitHub"><i class="fab fa-twitter"></i> @oswinso</a>
+<a href="https://scholar.google.com/citations?user=AwlxGQgAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+<strong> | </strong>
+<a href="https://www.linkedin.com/in/oswinso" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<strong> | </strong>
+<a href="https://github.com/oswinso" target="_blank" title="GitHub"><i class="fab fa-github"></i> oswinso</a>
+<strong> | </strong>
+<a href="https://twitter.com/oswinso" target="_blank" title="GitHub"><i class="fab fa-twitter"></i> @oswinso</a>
 <br><br>
